@@ -3,7 +3,9 @@
 #### Team Leader Email - jayanth.ajay@affine.ai
 
 ### A Brief of the Prototype:
-  This section must include UML Diagrams and prototype description
+  ![Image](https://github.com/bhaskarturkar/oneAPI-GenAI-Hackathon-2023/blob/main/process-flow-diagram.JPG)
+
+
   
 ### Tech Stack: 
    Technologies used (Mark down oneAPI AI Analytics libraries used) <br>
