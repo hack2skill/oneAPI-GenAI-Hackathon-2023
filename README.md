@@ -1,6 +1,6 @@
-#### Team Name - Team Affine
-#### Problem Statement - Generative AI Large Language Models Fine Tuned For Legal Practice Platform
-#### Team Leader Email - jayanth.ajay@affine.ai
+#### Team Name - **Team Affine**
+#### Problem Statement - **Generative AI Large Language Models Fine Tuned For Legal Practice Platform**
+#### Team Leader Email - **jayanth.ajay@affine.ai**
 
 ### A Brief of the Prototype:
   This section must include UML Diagrams and prototype description
