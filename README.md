@@ -6,18 +6,18 @@
   This section must include UML Diagrams and prototype description
   
 ### Tech Stack: 
-   Technologies used (Mark down oneAPI AI Analytics libraries used)
-1.Python
-2.Hugging Face
-3.ChromaDB
-4.Langchain
-5.Open-docx
-6.PyPDF
-7.Pytorch
+   Technologies used (Mark down oneAPI AI Analytics libraries used) <br>
+1.Python <br>
+2.Hugging Face <br>
+3.ChromaDB <br>
+4.Langchain <br>
+5.Open-docx <br>
+6.PyPDF <br>
+7.Pytorch <br>
 
-8.Intel OpenVINO
-9.Intel OpenDNN
-10.Intel OneAPI Base Toolkit
+8.Intel OpenVINO <br>
+9.Intel OpenDNN <br>
+10.Intel OneAPI Base Toolkit <br>
 
    
 ### Step-by-Step Code Execution Instructions:
