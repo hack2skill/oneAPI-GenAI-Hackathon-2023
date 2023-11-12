@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal AI App</title>
+</head>
+<body>
+    <h1>Legal AI App</h1>
+    <form action="/research" method="post">
+        <label for="query">Legal Research Query:</label>
+        <input type="text" id="query" name="query" required>
+        <button type="submit">Search</button>
+    </form>
+
+    <form action="/case_prediction" method="post">
+        <label for="case_details">Case Details:</label>
+        <input type="text" id="case_details" name="case_details" required>
+        <button type="submit">Predict Case Outcome</button>
+    </form>
+
+    <form action="/contract_review" method="post">
+        <label for="contract_text">Contract Text:</label>
+        <textarea id="contract_text" name="contract_text" required></textarea>
+        <button type="submit">Review Contract</button>
+    </form>
+</body>
+</html>
