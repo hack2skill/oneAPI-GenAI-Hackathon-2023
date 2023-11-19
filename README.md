@@ -1,4 +1,10 @@
-# oneAPI-GenAI-Hackathon-2023 - Hack2Skill
+rr# oneAPI-GenAI-Hackathon-2023 - Hack2Skill
+
+#### Team Name - Team BhuMe
+#### Problem Statement - AI-Enhanced Legal Practice Platform
+#### Team Leader Email - p17rajatp@iima.ac.in
+
+
 
 Welcome to the official repository for the oneAPI-GenAI-Hackathon-2023 organized by Hack2Skill!
 
