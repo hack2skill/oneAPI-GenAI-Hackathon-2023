@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
 
+{% block content %}
 
 <form method="post" enctype="multipart/form-data">
     {% csrf_token %}
@@ -114,7 +109,7 @@
 
     messageInput.value = '';
 
-    fetch('/chatbot/', {
+    fetch('/chat/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: new URLSearchParams({
@@ -145,5 +140,4 @@
 
 
 {% endif %}
-</body>
-</html>
+{% endblock %}

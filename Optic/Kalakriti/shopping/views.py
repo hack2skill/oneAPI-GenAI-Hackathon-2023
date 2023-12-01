@@ -1,17 +1,20 @@
 import io
 
 import PIL
-from django.core.files.storage import default_storage
+
 from django.http import JsonResponse
 from django.shortcuts import render
 from PIL import Image
+from .models import Products
 
-import os
+Product = Products()
 
 
 # Create your views here.
 def home(request):
-    return render(request, 'index.html')
+    product_details = Product.get_all_products()
+    product_data = {'product_data': product_details.values()}
+    return render(request, 'index.html', product_data)
 
 
 def image_cnn(request):
@@ -32,3 +35,7 @@ def chatbot(request):
         message = request.POST.get('message')
         return JsonResponse({'message': message, 'response': 'hello'})
     return render(request, 'chatbot.html', {'chats': 'hiii how are you'})
+
+
+def shopping(request):
+    return render(request, 'shop.html')

@@ -119,7 +119,7 @@ class DjangoSession(models.Model):
 class Order(models.Model):
     order_id = models.AutoField(db_column='Order_id', primary_key=True)  # Field name made lowercase.
     user = models.ForeignKey('User', models.DO_NOTHING, db_column='User_id')  # Field name made lowercase.
-    product = models.ForeignKey('Product', models.DO_NOTHING, db_column='Product')  # Field name made lowercase.
+    product = models.ForeignKey('Products', models.DO_NOTHING, db_column='id')  # Field name made lowercase.
     date = models.CharField(db_column='Date', max_length=255)  # Field name made lowercase.
 
     class Meta:
@@ -127,17 +127,29 @@ class Order(models.Model):
         db_table = 'order'
 
 
-class Product(models.Model):
-    company = models.CharField(db_column='Company', max_length=255)  # Field name made lowercase.
-    size = models.IntegerField(db_column='Size')  # Field name made lowercase.
-    price = models.IntegerField(db_column='Price')  # Field name made lowercase.
-    color = models.CharField(db_column='Color', max_length=255)  # Field name made lowercase.
-    type = models.CharField(db_column='Type', max_length=255)  # Field name made lowercase.
+class Products(models.Model):
+    id = models.AutoField(db_column='Product_id', primary_key=True)
+    name = models.CharField(max_length=60)
+    price = models.IntegerField(default=0)
+    category = models.CharField(max_length=60)
+    description = models.CharField(
+        max_length=250, default='', blank=True, null=True)
+    image = models.ImageField(upload_to='uploads/products/')
 
-    class Meta:
-        managed = False
-        db_table = 'product'
+    @staticmethod
+    def get_products_by_id(ids):
+        return Products.objects.filter(id__in=ids)
 
+    @staticmethod
+    def get_all_products():
+        return Products.objects.all()
+
+    @staticmethod
+    def get_all_products_by_categoryid(category_id):
+        if category_id:
+            return Products.objects.filter(category=category_id)
+        else:
+            return Products.get_all_products()
 
 class User(models.Model):
     password = models.CharField(db_column='Password', max_length=255)  # Field name made lowercase.
