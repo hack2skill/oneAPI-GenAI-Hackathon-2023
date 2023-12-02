@@ -71,7 +71,7 @@ $ npm run dev
   <li>npm v8.11.0</li>
 </ul>
 
-## 5. Application Screenshots / <a href="https://www.youtube.com/watch?v=ze_AhJvcTss">Demo.</a>
+## 5. Application Screenshots / <a href="">Demo.</a>
 
 <p align="center">
   <img src="data/Screenshots/0.png" />
