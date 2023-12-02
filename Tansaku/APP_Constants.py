@@ -1,0 +1,1 @@
+APP_ENDPOINT = "/tansaku/api/v1"
