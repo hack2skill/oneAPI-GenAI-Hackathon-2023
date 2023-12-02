@@ -1,0 +1,78 @@
+{% extends 'base.html' %}{% block content %}
+
+{% load static %}
+
+
+        <section id="hero">
+
+            <h4>Presenting,</h4>
+            <h2>OpTic AR Watches</h2>
+            <h1>Product Showcase</h1>
+            <p>placeholder text</p>
+            <button>Shop Now</button>
+
+        </section>
+
+        <section id="feature" class="section-p1">
+            <div class="fe-box">
+                <img src="{% static '/img/features/f1.png' %}" alt="">
+                <h6>Feature 1</h6>
+            </div>
+            <div class="fe-box">
+                <img src="{% static '/img/features/f2.png' %}" alt="">
+                <h6>Feature 2</h6>
+            </div>
+            <div class="fe-box">
+                <img src="{% static '/img/features/f3.png' %}" alt="">
+                <h6>Feature 3</h6>
+            </div>
+            <div class="fe-box">
+                <img src="{% static '/img/features/f4.png' %}" alt="">
+                <h6>Feature 4</h6>
+            </div>
+            <div class="fe-box">
+                <img src="{% static '/img/features/f5.png' %}" alt="">
+                <h6>Feature 5</h6>
+            </div>
+            <div class="fe-box">
+                <img src="{% static '/img/features/f6.png' %}" alt="">
+                <h6>Feature 6</h6>
+            </div>
+        </section>
+
+        <section id="product1" class="section-p1">
+          <h2>Featured Products</h2>
+          <p>Suggested for you</p>
+          <div class="pro-container">
+
+{% for data in product_data %}
+            <!-- product 1 -->
+            <div class="pro">
+              <img src="/media/{{data.image}}" alt="" height="300" width="100">
+
+              <div class="des">
+                <span>{{ data.name }}</span>
+                   <div class="variant-dropdown">
+
+    </div>
+{#                <h5>Watch // Variant 1</h5>#}
+                <div class="star">
+                  <ion-icon name="star" class="ratingstar"></ion-icon>
+                  <ion-icon name="star" class="ratingstar"></ion-icon>
+                  <ion-icon name="star" class="ratingstar"></ion-icon>
+                  <ion-icon name="star" class="ratingstar"></ion-icon>
+                  <ion-icon name="star-half" class="ratingstar"></ion-icon>
+                </div>
+                <h4>${{data.price}}</h4>
+              </div>
+              <a href="#"><ion-icon name="add-outline" class="addtocart"></ion-icon></a>
+            </div>
+    {%  endfor %}
+
+
+          </div>
+        </section>
+
+
+
+{% endblock %}

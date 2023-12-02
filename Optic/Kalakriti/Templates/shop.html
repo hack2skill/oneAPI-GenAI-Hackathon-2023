@@ -12,16 +12,25 @@
         </section>
 
         <section id="product1" class="section-p1">
-          <!-- <h2>Featured Products</h2>
-          <p>Suggested for you</p> -->
+
           <div class="pro-container">
 
+
+{% for data in product_data %}
             <!-- product 1 -->
-            <div class="pro" onclick="window.location.href='{% url 'index' %}';">
-              <img src="{% static '/img/products/f1.jpg' %}" alt=" ">
+            <div class="pro">
+             <img src="/media/{{ data.image }}" height="250" width="100">
+            <form method="post" enctype="application/x-www-form-urlencoded" action="{% url 'addcart' %}">
+                  {% csrf_token %}
+
+                <input type="hidden" name="product_id" value={{ data.id }}>
+                <input type="submit">
+            </form>
+
+
               <div class="des">
-                <span>Optic</span>
-                <h5>Watch // Variant 1</h5>
+                <span>{{ data.name }}</span>
+{#                <h5>Watch // Variant 1</h5>#}
                 <div class="star">
                   <ion-icon name="star" class="ratingstar"></ion-icon>
                   <ion-icon name="star" class="ratingstar"></ion-icon>
@@ -29,21 +38,17 @@
                   <ion-icon name="star" class="ratingstar"></ion-icon>
                   <ion-icon name="star-half" class="ratingstar"></ion-icon>
                 </div>
-                <h4>$10</h4>
+                <h4>${{data.price}}</h4>
               </div>
-              <a href="#"><ion-icon name="add-outline" class="addtocart"></ion-icon></a>
+              <a href="{% url 'addcart' %}"><ion-icon name="add-outline" class="addtocart"></ion-icon></a>
             </div>
+    {%  endfor %}
 
-            <!-- product 2 -->
 
           </div>
         </section>
 
-        <section id="pagination" class="section-p1">
-          <a href="#">1</a>
-          <a href="#">2</a>
-          <a href="#"><ion-icon name="arrow-forward-outline" class="arrow"></ion-icon></a>
-        </section>
+
         
 
 {% endblock %}

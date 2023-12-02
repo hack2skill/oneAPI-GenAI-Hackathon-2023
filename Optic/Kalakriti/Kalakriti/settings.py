@@ -75,7 +75,7 @@ WSGI_APPLICATION = 'Kalakriti.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'genai',
+        'NAME': 'genai_hackathon',
         'USER': 'root',
         'PASSWORD': 'root',
         'PORT': '3306',

@@ -1,20 +1,13 @@
 import io
-
 import PIL
-
 from django.http import JsonResponse
 from django.shortcuts import render
 from PIL import Image
-from .models import Products
-
-Product = Products()
 
 
 # Create your views here.
 def home(request):
-    product_details = Product.get_all_products()
-    product_data = {'product_data': product_details.values()}
-    return render(request, 'index.html', product_data)
+    return render(request, 'index.html')
 
 
 def image_cnn(request):
@@ -38,4 +31,12 @@ def chatbot(request):
 
 
 def shopping(request):
-    return render(request, 'shop.html')
+
+    return render(request, 'shop.html', product_data)
+
+
+def addtochart(request):
+    if request.method == "POST":
+        product_id = request.POST.get('product_id')
+
+        return render(request, 'index.html')
