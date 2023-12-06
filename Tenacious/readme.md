@@ -1,4 +1,4 @@
-**Team Name** - Tenacious
+**Team Name** - Tenacious<br>
 **Problem Statement** - Revolutionary AI-Infused Retail Platform
 **Team Leader Email** - dhiman.anushka@gmail.com
 A Brief of the Prototype:
