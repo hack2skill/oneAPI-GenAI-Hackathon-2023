@@ -1,7 +1,7 @@
 **Team Name** - Tenacious<br>
 **Problem Statement** - Revolutionary AI-Infused Retail Platform<br>
 **Team Leader Email** - dhiman.anushka@gmail.com<br>
-#A Brief of the Prototype
+# A Brief of the Prototype
 GenAI Product Shots, will generate professional studio equivalent images of products.
 GenAI Product Shots will cut the photography time, cost and resource.
 We will mask the object from the image, then original image and masked image will be given as an input.
