@@ -3,8 +3,8 @@
 #### Team Leader Email - prajnac20@gmail.com
 
 ## A Brief of the Prototype:
+![diagram](https://github.com/prajnac20/oneAPI-GenAI-Hackathon-2023/assets/47785645/4ca86a1a-ad1b-4369-9141-e38bdb84d226)
 
-![Project Diagram](diagram.png)
 Our Chatbot is a cutting-edge tool designed to empower legal practitioners by providing in-depth analysis and comprehensive insights into legal cases. Tailored specifically for the legal profession, this chatbot offers a seamless and efficient way for legal professionals to navigate through complex cases, aiding them in making informed decisions and formulating effective strategies.
 
 ### Key Features:
