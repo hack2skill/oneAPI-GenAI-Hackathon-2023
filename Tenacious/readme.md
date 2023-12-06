@@ -21,7 +21,15 @@ Multiple variant of these images with different colours and backgrounds can be u
 - Stable Diffusion
 
 # Step-by-Step Code Execution Instructions
-This Section must contain a set of instructions required to clone and run the prototype so that it can be tested and deeply analyzed<br>
+
+``git clone https://github.com/akkmr1996/oneAPI-GenAI-Hackathon-2023.git``
+
+``cd Tenacious``
+
+``pip install -r requirements.txt``
+
+``python main.py``
+<br>
 
 # Future Scope
 - We will develop a user friendly web application using Flask.
