@@ -3,7 +3,7 @@
 #### Team Leader Email - jayanth.ajay@affine.ai
 
 ### A Brief of the Prototype:
-  ![Image](https://github.com/bhaskarturkar/oneAPI-GenAI-Hackathon-2023/blob/main/process-flow-diagram.JPG)
+  (https://github.com/bhaskarturkar/oneAPI-GenAI-Hackathon-2023/blob/main/process-flow-diagram.JPG)
 
 
   
