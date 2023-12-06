@@ -23,18 +23,69 @@
    
 ### Step-by-Step Code Execution Instructions:
 
-  ## 2. Install required modules
+#####Getting Started
+These instructions will guide you through setting up your environment and running the project.
 
-  ## 1. Install required modules
- 
-   To install all the required modules, use the following command:
- 
+#####Prerequisites
+1.An IDC compute instance
+2.SSH access to the instance
+3.Miniconda (instructions included for installation)
+####Installation and Setup
+1. SSH into the IDC Compute Instance
+To start, SSH into your IDC compute instance. Replace <YourInstanceIP> with your actual instance IP address.
 ```
+bash
+ssh username@<YourInstanceIP>
+```
+2. Install Miniconda
+Once logged in, install Miniconda for a simplified Python environment management. Run the following:
+```
+bash
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+bash Miniconda3-latest-Linux-x86_64.sh
+```
+Follow the on-screen instructions to complete the installation.
+
+3. Create and Activate a Conda Environment
+Create a new Conda environment with Python version 3.10.6:
+
+```
+bash
+conda create -n myenv python=3.10.6
+conda activate myenv
+```
+This will create and activate a new environment named myenv.
+
+4. Install Required Modules
+Install the required modules specified in requirements.txt:
+```
+bash
 pip install -r requirements.txt
 ```
-  ## 2. Run Following command 
+Ensure requirements.txt is present in your current directory.
+
+5. Accessing Streamlit UI and Port Forwarding
+To access the Streamlit UI, use SSH tunneling for port forwarding. Run the following command on your local machine:
 ```
-streamlit run Homepage.py
+streamlit run Homepage.py```
 ```
+bash
+
+ssh -L 8501:localhost:8501 username@<YourInstanceIP>
+```
+Then, you can access the Streamlit UI by navigating to localhost:8501 in your web browser.
+
+Running the Application
+Provide any additional steps necessary to run your application, if applicable.
+
+Contributing
+Guidelines for contributing to this repository, if applicable.
+
+
+
+Note: Replace placeholders (like <YourInstanceIP>) with actual values relevant to your project. You may also want to add more specific instructions or descriptions depending on the complexity and requirements of your project.
+
+
+
 ### Future Scope:
    Write about the scalability and futuristic aspects of the prototype developed
