@@ -78,9 +78,8 @@ Guidelines for contributing to this repository, if applicable.
 
 
 
-Note: Replace placeholders (like <YourInstanceIP>) with actual values relevant to your project. You may also want to add more specific instructions or descriptions depending on the complexity and requirements of your project.
-
+Note: Replace placeholders (like <YourInstanceIP>) with actual values relevant to your project. 
 
 
 ### Future Scope:
-   Write about the scalability and futuristic aspects of the prototype developed
+   A Fine tuned model may improve the results.
