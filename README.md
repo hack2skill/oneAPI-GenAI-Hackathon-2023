@@ -1,32 +1,47 @@
 # oneAPI-GenAI-Hackathon-2023 - Hack2Skill
 
-Welcome to the official repository for the oneAPI-GenAI-Hackathon-2023 organized by Hack2Skill!
+# CASAhackathon
+**Team Name** - Quantum coders
 
-## Getting Started
+**Problem Statement** - AI enhanced retail shopping
 
-To get started with the oneAPI-GenAI-Hackathon-2023 repository, follow these steps:
+**Team Leader Email** - ravishankarvaradharajan@gmail.com
 
-### Submission Instruction:
-  1. Fork this repository
-  2. Create a folder with your Team Name
-  3. Upload all the code and necessary files in the created folder
-  4. Upload a **README.md** file in your folder with the below mentioned informations.
-  5. Generate a Pull Request with your Team Name. (Example: submission-XYZ_team)
+**A Brief of the Prototype:**
 
-### README.md must consist of the following information:
+Chief AI Shopping Assistant (CASA) is a proactive shopping companion featuring learning adaptation, tailoring each user's experience by continuously adapting to evolving preferences. It also provides Instore analysis and helps with visual merchandising. 
+It will help us track deadzones in the store. The analysis will be displayed on a dashboard which contain Customer gaze analysis, Foot traffic, User Interaction with products. It will also helps in predicting the sales and keep up with the trends.
+Our online assistant powered by LLM will provide suggestions based on items in the cart, user preferences and user profile. It also provides a chat interface to have a back and forth conversation to help the user figure out their fashion needs.
 
-#### Team Name -
-#### Problem Statement - 
-#### Team Leader Email -
+**Instore flow:**
 
-### A Brief of the Prototype:
-  This section must include UML Diagrams and prototype description
-  
-### Tech Stack: 
-   List Down all technologies used to Build the prototype
-   
-### Step-by-Step Code Execution Instructions:
-  This Section must contain a set of instructions required to clone and run the prototype so that it can be tested and deeply analyzed
-  
-### Future Scope:
-   Write about the scalability and futuristic aspects of the prototype developed
+![image](https://github.com/no-one-really/CASAhackathon/assets/58998511/5494b8b6-9bb9-42a1-834f-4e100f03e433)
+
+**Online recommendation flow:**
+
+![image](https://github.com/no-one-really/CASAhackathon/assets/58998511/397447e0-285b-45a1-9fa5-a7e5f60f3c9e)
+
+
+**Tech Stack:**
+
+![image](https://github.com/no-one-really/CASAhackathon/assets/58998511/1b3c9f27-1c66-4756-85f7-afc8548398b1)
+
+
+**Step-by-Step Code Execution Instructions:**
+
+Step 1: Install requirements
+```pip install - requirements.txt```
+
+Step2:
+Host the Django server by runnning python manage.py runserver
+
+Step3:
+setup ngrok https://ngrok.com/docs/getting-started/
+
+Step4:
+delpoy the model by running start.js, serv.py and recieve.py
+
+**Future Scope:**
+
+ To integrate Large Language-and-Vision Assistants to provide better shopping assistance and gain better insights on the customer needs
+
