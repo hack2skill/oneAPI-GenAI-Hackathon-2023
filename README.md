@@ -34,13 +34,11 @@ These instructions will guide you through setting up your environment and runnin
 1. SSH into the IDC Compute Instance
 To start, SSH into your IDC compute instance. Replace <YourInstanceIP> with your actual instance IP address.
 ```
-bash
 ssh username@<YourInstanceIP>
 ```
 2. Install Miniconda
 Once logged in, install Miniconda for a simplified Python environment management. Run the following:
 ```
-bash
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 bash Miniconda3-latest-Linux-x86_64.sh
 ```
@@ -50,7 +48,6 @@ Follow the on-screen instructions to complete the installation.
 Create a new Conda environment with Python version 3.10.6:
 
 ```
-bash
 conda create -n myenv python=3.10.6
 conda activate myenv
 ```
@@ -59,7 +56,6 @@ This will create and activate a new environment named myenv.
 4. Install Required Modules
 Install the required modules specified in requirements.txt:
 ```
-bash
 pip install -r requirements.txt
 ```
 Ensure requirements.txt is present in your current directory.
@@ -69,8 +65,6 @@ To access the Streamlit UI, use SSH tunneling for port forwarding. Run the follo
 ```
 streamlit run Homepage.py```
 ```
-bash
-
 ssh -L 8501:localhost:8501 username@<YourInstanceIP>
 ```
 Then, you can access the Streamlit UI by navigating to localhost:8501 in your web browser.
