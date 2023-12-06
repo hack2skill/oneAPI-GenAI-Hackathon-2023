@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .container {
+            display: flex;
+        }
+
+        .left-side {
+            flex: 75%;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        .right-side {
+            flex: 25%;
+            background-color: #e0e0e0;
+            padding: 20px;
+        }
+    </style>
+
+    <link rel="stylesheet" href="{% static 'css/st.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+</head>
+<body>
+
+    <div class="container opkl">
+        <div class="left-side">
+            <div class="chat-container">
+              <div class="inchat">
+
+                <div class="message assistant-message">Hi there! I am here to help you revamp your style</div>
+                
+              </div>
+
+                <div class="input-group mb-3 awe">
+                    <input type="text" class="form-control" placeholder="Type your message..." id="inputMessage">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary " type="button" onclick="sendMessage()">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right-side">
+            <div class="cards-container ghj">
+                <!-- Picture cards will be dynamically populated here -->
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'js/sc.js' %}"></script>
+    <script>
+
+    const baseStaticUrl = "{% static '' %}";
+</script>
+
+</body>
+</html>
