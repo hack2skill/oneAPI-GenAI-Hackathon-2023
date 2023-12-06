@@ -13,3 +13,6 @@ Prototype Description:
   For Legal research, we’ve integrated LLM with RAG (Retrieval Augmented Generation) to access details about specific cases of interest to users. This integration      facilitates the provision of valuable insights for their case proceedings.
 
   For IPC related queries, we have fine-tuned a T5 large model using an IPC dataset and used Intel developer cloud for finetuning. This enables the model to identify   the specific IPC section applicable to a given scenario.
+
+  ![arc](https://github.com/hari-tummuri/oneAPI-GenAI-Hackathon-2023/assets/104126503/4919b2c9-9ea3-43a0-8bcb-c1bfd2dd74b4)
+
