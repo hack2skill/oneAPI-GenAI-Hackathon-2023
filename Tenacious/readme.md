@@ -12,11 +12,11 @@ This section must include UML Diagrams and prototype description<br>
 
 # Tech Stack
 Intel Extension for PyTorch
-PyTorch-GPU
-OpenCV
-Numpy
-Pillow
-<br>
+PyTorch-GPU<br>
+OpenCV<br>
+Numpy<br>
+Pillow<br>
+
 
 # Step-by-Step Code Execution Instructions
 This Section must contain a set of instructions required to clone and run the prototype so that it can be tested and deeply analyzed<br>
