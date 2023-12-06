@@ -22,4 +22,7 @@ This section must include UML Diagrams and prototype description<br>
 This Section must contain a set of instructions required to clone and run the prototype so that it can be tested and deeply analyzed<br>
 
 # Future Scope
-Write about the scalability and futuristic aspects of the prototype developed
+- For future we will develop a user friendly web application using Flask.
+- In this we have only used a car as a product, but in future we will use different product like food product, beauty and fashion products.
+- Then we need to train a segmentation model for these products and then deployed it on Intel Cloud and hence use the Intel OneAPI Toolkit.
+
