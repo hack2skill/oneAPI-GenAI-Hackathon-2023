@@ -23,14 +23,14 @@
    
 ### Step-by-Step Code Execution Instructions:
 
-####Getting Started
+#### Getting Started
 These instructions will guide you through setting up your environment and running the project.
 
-####Prerequisites
-1.An IDC compute instance
-2.SSH access to the instance
-3.Miniconda (instructions included for installation)
-####Installation and Setup
+#### Prerequisites
+1.An IDC compute instance <br>
+2.SSH access to the instance <br>
+3.Miniconda (instructions included for installation) <br>
+#### Installation and Setup
 1. SSH into the IDC Compute Instance
 To start, SSH into your IDC compute instance. Replace <YourInstanceIP> with your actual instance IP address.
 ```
