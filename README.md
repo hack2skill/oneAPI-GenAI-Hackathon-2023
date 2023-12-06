@@ -71,7 +71,9 @@ ssh -L 8501:localhost:8501 username@<YourInstanceIP>
 Then, you can access the Streamlit UI by navigating to localhost:8501 in your web browser.
 
 #### Working demo
-[![image](https://github.com/bhaskarturkar/oneAPI-GenAI-Hackathon-2023/assets/150421011/63bdac37-45e8-4445-b296-7a7cab09ad27)](URL)
+[Working demo of contract comparator](https://vimeo.com/891854466
+![image](https://github.com/bhaskarturkar/oneAPI-GenAI-Hackathon-2023/assets/150421011/e7b21d91-6296-4017-a34d-2785312edfa7)
+)
 
 Contributing
 Guidelines for contributing to this repository, if applicable.
