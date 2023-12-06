@@ -9,6 +9,9 @@ The platform seamlessly integrates the capabilities of oneAPI and Intel technolo
 
 Furthermore, a sophisticated chat module, underpinned by our finely-tuned LLAMA-2 model and powered by Intel technologies, facilitates technical discussions on legal matters. The integration of oneAPI ensures optimized performance, scalability, and efficiency throughout the platform. This technical synergy of oneAPI, Intel technologies, RAG, and LLAMA-2 not only elevates the lawyer's ability to efficiently manage cases but also establishes a secure and technologically advanced environment for legal practitioners.
 
+## Dataset:
+https://www.kaggle.com/datasets/vangap/indian-supreme-court-judgments
+
 ## Tech Stack:
 1. **Intel® oneAPI Deep Neural Network Library (oneDNN):**
    - Use oneDNN for optimized deep learning operations, accelerating the training and inference processes of the fine-tuned LLAMA-2 model.
