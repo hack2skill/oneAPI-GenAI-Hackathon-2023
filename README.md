@@ -63,7 +63,8 @@ Ensure requirements.txt is present in your current directory.
 5. Accessing Streamlit UI and Port Forwarding
 To access the Streamlit UI, use SSH tunneling for port forwarding. Run the following command on your local machine:
 ```
-streamlit run Homepage.py```
+streamlit run Homepage.py
+```
 ```
 ssh -L 8501:localhost:8501 username@<YourInstanceIP>
 ```
