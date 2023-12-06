@@ -82,4 +82,4 @@ Note: Replace placeholders (like <YourInstanceIP>) with actual values relevant t
 
 
 ### Future Scope:
-   A Fine tuned model may improve the results.
+   A Fine tuning a bigger model using proper relevanr dataset may improve the results.
