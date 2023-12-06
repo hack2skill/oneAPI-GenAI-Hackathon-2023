@@ -11,11 +11,11 @@ Multiple variant of these images with different colours and backgrounds can be u
 This section must include UML Diagrams and prototype description<br>
 
 # Tech Stack
-Intel Extension for PyTorch
-PyTorch-GPU<br>
-OpenCV<br>
-Numpy<br>
-Pillow<br>
+- Intel Extension for PyTorch
+- PyTorch-GPU<br>
+- OpenCV<br>
+- Numpy<br>
+- Pillow<br>
 
 
 # Step-by-Step Code Execution Instructions
