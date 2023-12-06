@@ -1,6 +1,5 @@
 pillow
 pypdf
-openai
 streamlit
 python-dotenv
 pyngrok
@@ -12,6 +11,4 @@ chromadb==0.3.21
 tiktoken
 openpyxl
 prettytable==3.8.0
-azure-ai-formrecognizer
 Pymupdf
-google-generativeai
