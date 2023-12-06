@@ -24,7 +24,20 @@ Prototype Description:
   
   
   Step-by-Step Code Execution Instructions:
+  
+1.  Login to IDC(Intel developer cloud)
+2. Install node,express,ngrok
+3. import main.js file
+4. import llama.py
+5. login to ngrok account
+6. run the node files
+7. Ngrok will give a url to make a API call to the node.js file for tunneling
+8. the user has to update the ngrok url in app.py file.
+9. the user has to install all the requirements in requirements.txt file
+10. the user has to run the app.py streamlit file
+    
 
+   
 
 
   
