@@ -23,10 +23,10 @@
    
 ### Step-by-Step Code Execution Instructions:
 
-#####Getting Started
+####Getting Started
 These instructions will guide you through setting up your environment and running the project.
 
-#####Prerequisites
+####Prerequisites
 1.An IDC compute instance
 2.SSH access to the instance
 3.Miniconda (instructions included for installation)
