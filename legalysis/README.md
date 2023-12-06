@@ -16,10 +16,15 @@ Prototype Description:
 
   ![arc](https://github.com/hari-tummuri/oneAPI-GenAI-Hackathon-2023/assets/104126503/4919b2c9-9ea3-43a0-8bcb-c1bfd2dd74b4)
 
+
+  
+
   Step-by-Step Code Execution Instructions:
 
 
 
-  Future scope:
 
+
+Future scope:
+      To enhance the solution’s effectiveness, we plan to incorporate litigation strategy development in the near future by fine-tuning an LLM and integrating Retrieval-Augmented Generation.
 
