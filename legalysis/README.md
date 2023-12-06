@@ -16,3 +16,10 @@ Prototype Description:
 
   ![arc](https://github.com/hari-tummuri/oneAPI-GenAI-Hackathon-2023/assets/104126503/4919b2c9-9ea3-43a0-8bcb-c1bfd2dd74b4)
 
+  Step-by-Step Code Execution Instructions:
+
+
+
+  Future scope:
+
+
