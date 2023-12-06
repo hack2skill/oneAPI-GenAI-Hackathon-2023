@@ -17,13 +17,14 @@
 6.PyPDF <br>
 7.Pytorch <br>
 
-8.Intel OpenVINO <br>
-9.Intel OpenDNN <br>
-10.Intel OneAPI Base Toolkit <br>
+8.Intel OpenDNN <br>
+9.Intel OneAPI Base Toolkit <br>
 
    
 ### Step-by-Step Code Execution Instructions:
-  This Section must contain a set of instructions required to clone and run the prototype so that it can be tested and deeply analyzed
+
+  ## 2. Install required modules
+
   ## 1. Install required modules
  
    To install all the required modules, use the following command:
