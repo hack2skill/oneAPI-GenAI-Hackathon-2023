@@ -1,5 +1,3 @@
-# oneAPI-GenAI-Hackathon-2023 - Hack2Skill
-
 # CASAhackathon
 **Team Name** - Quantum coders
 
