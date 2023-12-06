@@ -43,7 +43,47 @@ Furthermore, a sophisticated chat module, underpinned by our finely-tuned LLAMA-
 These libraries from the Intel® oneAPI AI Analytics toolkit provide a comprehensive set of tools for optimized deep learning, mathematical operations, parallelism, and security, contributing to the efficiency and performance of the legal document research platform.
 
 ## Step-by-Step Code Execution Instructions:
-This Section must contain a set of instructions required to clone and run the prototype so that it can be tested and deeply analyzed.
+##Commands for setup a new server - 
+
+Install anaconda with this guide-
+https://www.digitalocean.com/community/tutorials/how-to-install-the-anaconda-python-distribution-on-ubuntu-22-04
+
+AI toolkit installation-
+https://www.intel.com/content/www/us/en/developer/tools/oneapi/ai-analytics-toolkit-download.html?operatingsystem=linux&distributions=offline
+
+Clone this repo and follow instructions from step 3 onwards from README-
+https://github.com/vishnumadhu365/oneapi-devsummit-sea-2023
+
+
+##Running backend flask server
+
+Create SSH session with tunnel on port 5000
+```cpp
+ssh -L 5000:100.80.227.42:5000 -J guest@146.152.232.8 ubuntu@100.80.227.42
+```
+
+
+Switch to root user:
+```cpp
+sudo -i
+```
+
+
+Go to project directory:
+```cpp
+cd /root/hackathon/oneapi-devsummit-sea-2023/
+```
+
+
+Activate virtual environment:
+```cpp
+source itex_cpu/bin/activate
+```
+
+start python application:
+```cpp
+python hackathon-notebooks/rag_llm_service.py
+```
 
 ## Future Scope:
 The prototype exhibits notable scalability and forward-looking features that position it as an advanced solution for the evolving landscape of legal document research. Leveraging Intel technologies such as oneAPI Threading Building Blocks and oneDAL, the platform efficiently scales to handle a substantial volume of legal documents. This not only ensures optimal performance but also primes the system for accommodating future expansions in legal data repositories.
