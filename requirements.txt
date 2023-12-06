@@ -1,7 +1,13 @@
+torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+intel-extension-for-pytorch
+accelerate==0.23.0 
+validators==0.22.0 
+transformers==4.32.1 
+sentencepiece
+ipywidgets
 pillow
 pypdf
 streamlit
-python-dotenv
 pyngrok
 backoff
 streamlit-chat==0.0.2.2
