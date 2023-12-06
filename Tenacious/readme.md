@@ -11,7 +11,12 @@ Multiple variant of these images with different colours and backgrounds can be u
 This section must include UML Diagrams and prototype description<br>
 
 # Tech Stack
-List Down all technologies used to Build the prototype<br>
+Intel Extension for PyTorch
+PyTorch-GPU
+OpenCV
+Numpy
+Pillow
+<br>
 
 # Step-by-Step Code Execution Instructions
 This Section must contain a set of instructions required to clone and run the prototype so that it can be tested and deeply analyzed<br>
