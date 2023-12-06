@@ -8,7 +8,7 @@ We will mask the object from the image, then original image and masked image wil
 Stable diffusion will produce desirable results based on the input and prompt.
 Multiple variant of these images with different colours and backgrounds can be used for product catalogue.
 
-![Architecture Diagram](https://drive.google.com/file/d/1no5YR2-pxnFiyLCawAkUeKYTwUXCW2n5/view?usp=sharing)
+![Architecture Diagram](architecture_diagram.png)
 
 This section must include UML Diagrams and prototype description<br>
 
