@@ -1,6 +1,6 @@
 **Team Name** - Tenacious
-Problem Statement - Revolutionary AI-Infused Retail Platform
-Team Leader Email - dhiman.anushka@gmail.com
+**Problem Statement** - Revolutionary AI-Infused Retail Platform
+**Team Leader Email** - dhiman.anushka@gmail.com
 A Brief of the Prototype:
 GenAI Product Shots, will generate professional studio equivalent images of products.
 GenAI Product Shots will cut the photography time, cost and resource.
