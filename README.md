@@ -1,6 +1,6 @@
 
 ####  Team Name - Optic
-#### Problem Statement - 
+#### Problem Statement - Retail Store
 #### Team Leader Email - jainsahil1116@gmail.com
 
 #### Image Caption Generation
@@ -15,6 +15,16 @@ Usage: Explore tailored recommendations through [instructions].
 #### Augmented Reality Try-On
 Description: Enables customers to virtually try on products using augmented reality technology.
 Usage: Experience the AR Try-On by
+
+### LLM
+The LLM folder contains the code of the model trasning intel toolkit usage
+
+### Webiste
+
+The webiste folder contains all the website code including the DB
+
+
+
 
 #### Steps to run
 ### Clone the repository to your local machine:
