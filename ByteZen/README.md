@@ -31,7 +31,7 @@ The prototype utilizes Huggingface Transformers with large language models, incl
 ![Core Components](https://github.com/Hemachandirant/Intel_Hackathon_Customer_Support-oneAPI/assets/83321708/dc0a4bb6-856b-4e65-bf4f-1930dc734f1f)
 
 ### Models
-- Huggingface Transformers
+- Huggingface Transformers [https://huggingface.co/shivani05/Mistral-Finetuned-CPU/tree/main]
   - LLMs: Mistral-7B, Zephyr-7B
 
 ### Technologies Used
@@ -44,6 +44,15 @@ The prototype utilizes Huggingface Transformers with large language models, incl
 7. Node.js (Avatar Application)
 8. Azure Speech Service
 9. Ngrok
+
+### Xenon CPU Utilization during model training:
+
+https://github.com/Hemachandirant/Intel_Hackathon_Customer_Support-oneAPI/assets/83321708/06202406-01e2-4fd4-aee2-57b494b3b3e7
+
+### Training loss and saving the model:
+
+![BeFunky-collage](https://github.com/Hemachandirant/Intel_Hackathon_Customer_Support-oneAPI/assets/83321708/ef4653da-1ffe-43d6-ba56-15fd14b4684c)
+
 
 ### Future Scope:
    Our roadmap involves leveraging Large Language Models (LLMs) to integrate advanced automation support into the customer support application, enhancing issue resolution and user experience.
@@ -59,6 +68,10 @@ The prototype utilizes Huggingface Transformers with large language models, incl
 3. **User-Empowered Solutions:**
    - Allow users to initiate LLM-driven automated checks and resolutions.
    - Ensure transparency and user consent for LLM-powered automated actions.
+  
+## Medium Article
+
+[Revolutionizing Tech Support with Intel AI Toolkits and OneAPI](https://medium.com/@rshivanipriya/revolutionizing-tech-support-with-intel-ai-toolkits-and-oneapi-4cf7027909af)
 
 ## Step-by-Step Code Execution Instructions
 
@@ -83,9 +96,7 @@ pip install --upgrade pip
 pip install scikit-image jupyter matplotlib intel_extension_for_transformers intel-extension-for-tensorflow[cpu]==2.13.0.0 keras_cv keras_core ipykernel prettytable
 jupyter kernelspec uninstall $ENV_NAME -y
 python3 -m ipykernel install --user --name=$ENV_NAME
-
-#Clone the repository
-git clone https://github.com/Hemachandirant/Intel_Hackathon_Customer_Support-oneAPI.git
+conda deactivate
 
 # Install Packages using Requirements.txt
 pip install -r requirements.txt
@@ -103,3 +114,6 @@ curl -s https://ngrok-agent.s3.amazonaws.com/ngrok.asc | sudo tee /etc/apt/trust
 
 # Authentication for Ngrok
 ngrok config add-authtoken YOUR_TOKEN
+
+#Run the below command to lauch
+ngrok http <Port number>
