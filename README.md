@@ -17,7 +17,7 @@ Description: Enables customers to virtually try on products using augmented real
 Usage: Experience the AR Try-On by
 
 ### LLM
-The LLM folder contains the code of the model trasning intel toolkit usage
+The LLM folder contains the code of the model and traning using intel toolkit usage
 
 ### Webiste
 
