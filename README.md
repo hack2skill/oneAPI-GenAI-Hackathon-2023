@@ -36,7 +36,7 @@ pip install -r requirements.txt
 
 ### Model Folder
 
-Downalod the Model folder from the Drive link place  it in optic/webiste/
+Downalod the Model folder Make sure to place all the 4 model in a single folder "Machine-learning" and place that folder  in optic/webiste/
 ```` bash
 https://drive.google.com/drive/folders/1UVNSlUs2f0EeA0V6Cee8g_K3872EWlYu?usp=drive_link
 ````
