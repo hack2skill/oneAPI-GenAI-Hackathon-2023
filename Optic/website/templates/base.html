@@ -6,26 +6,28 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Optic - Home</title>
-         {% load static %}
-          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
+        {% load static %}
         <link rel="icon" type="image/x-icon" href="{% static '/img/favicon.ico' %}">
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
-        <link rel="stylesheet" href="{%  static '/css/style.css'%}">
+        <link rel="stylesheet" href="{% static '/css/style.css' %}">
+        <link rel="stylesheet" href="{% static '/css/upload.css' %}">
     </head>
 
-<body>
- <section id="header">
-            <a href="#"><img src="{% static '/img/optic logo/op2.png' %}" class="logo" alt="logo"></a>
+    <body>
+        <section id="header">
+            <a href="#"><img src="{% static '/img/optic logo/op0.png' %}" class="logo" alt="logo"></a>
 
             <div>
                 <ul id="navbar">
                     <li><a class="{% if request.path == '/' %}active{% endif %}" href="{% url 'index' %}">Home</a></li>
-{#                    <li><a class="{% if request.path == '/shop/' %}active{% endif %}" href="{% url  'shop' %}">Shop</a></li>#}
-{#                    <li><a class="{% if request.path == '/chatbot/' %}active{% endif %}" href="{% url 'chatbot' %}">Chatbot</a></li>#}
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="cart.html"><ion-icon name="cart-sharp" size="large" class="icart"></ion-icon></a></li>
+                    <li><a class="{% if request.path == '/shop/' %}active{% endif %}" href="{% url 'addcart' %}">Shop</a></li>
+                    <li><a class="{% if request.path == '/chat/' %}active{% endif %}" href="{% url 'chat' %}">Chatbot</a></li>
+                    <!-- <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li> -->
+                {% if  request.user.is_authenticated %}
+                    {<li><a  href="{% url 'logout' %}">Logout</a></li>}
+                {% endif %}
+                    <li><a href="{% url 'cart' %}"><ion-icon name="cart-sharp" size="large" class="icart"></ion-icon></a></li>
                     <a href="#" id="close"><ion-icon name="close"></ion-icon></a>
                 </ul>
             </div>
@@ -36,8 +38,12 @@
  {% block content %}
   {% endblock %}
 
+{% if request.path == "/chat/" %}
 
-<footer class="footer-distributed">
+
+
+ {% else %}
+ <footer class="footer-distributed">
             <div class="footer-left">
               <p class="flheader">Optic</p>
 
@@ -60,23 +66,23 @@
               </p>
 
               <div class="footer-icons">
-                <a href="" class="icon1"
-                  ><img src="https://imgs.search.brave.com/3a7rfiGzuEVFBNr-7Oah3YbcGDUKEV9_-ivTv5Bbs7I/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9jZG40/Lmljb25maW5kZXIu/Y29tL2RhdGEvaWNv/bnMvZnJlZS1jb2xv/cmZ1bC1pY29ucy8z/NjAvZ21haWwucG5n" alt="" height="50"
-                /></a>
+                <a href="" class="icon1"><ion-icon name="logo-google" class="icon2"></ion-icon></a>
                 &nbsp;&nbsp;&nbsp;
-                <a href="" target="_blank" class="icon1"
-                  ><img src="https://imgs.search.brave.com/0onedxgdJWLsAOrzVTbco23TxXLuDJGb_uBUL74bc7k/rs:fit:500:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy9j/L2NhL0xpbmtlZElu/X2xvZ29faW5pdGlh/bHMucG5n" alt=""  height="50"
-                /></a>
+                <a href="" class="icon1"><ion-icon name="logo-github"class="icon2"></ion-icon></a>
                 &nbsp;&nbsp;&nbsp;
-                <a href="" target="_blank" class="icon1">
-                  <img src="{% static '/img/github2.png' %}" alt="" class="icons"/>
-                </a>
+                <a href="" class="icon1"><ion-icon name="logo-linkedin" class="icon2"></ion-icon></a>
               </div>
             </div>
         </footer>
- <script src="/js/script.js"></script>
+   {% endif %}
+        <script src="/js/script.js"></script>
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+         <script src="/js/script.js"></script>
+        <script src="{% static '/js/upload.js' %}"></script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
 
 </body>
 </html>

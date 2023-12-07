@@ -2,39 +2,19 @@
 
 {% block content %}
 
-<form method="post" enctype="multipart/form-data">
-    {% csrf_token %}
-    <input type="file" name="sentFile" />
-    <input type="submit" name="submit" value="Upload" />
-</form>
-
-{{ response }}
-
 {% if response %}
-
-<div class="chat-container">
+    <div class="chat-container">
   <div class="card flex-grow-1">
-    <div class="card-header bg-primary text-white">Chat</div>
+    <div class="card-header bg-primary text-white">Welcome You can ask any question</div>
     {% if user.is_authenticated %}
-    <div class="card-header bg-primary text-white"><b>Welcome, {{user.username}}</b>   <a style="color: yellow;" href="logout">Logout</a></div>
     {% else %}
-    <div class="card-header bg-primary text-white"><a style="color: yellow" href="login">Login</a>   <a style="color: yellow;" href="register">Register</a></div>
     {% endif %}
     <div class="card-body messages-box">
 
       <ul class="list-unstyled messages-list">
-
-        <!-- <li class="message received">
-          <div class="message-text">
-            <div class="message-sender">
-              <b>AI Chatbot</b>
+ <div class="message-content">
+            The image description {{ response }}
             </div>
-            <div class="message-content">
-              Hi {{user.username}}, I am your AI Chatbot, you can ask me anything.
-            </div>
-          </div>
-        </li> -->
-
         {% for chat in chats %}
           {% if chat.user == request.user %}
 
@@ -54,6 +34,7 @@
             <div class="message-sender">
               <b>AI Chatbot</b>
             </div>
+
             <div class="message-content">
               {{chat.response}}
             </div>
@@ -80,7 +61,52 @@
     </div>
   </form>
 </div>
+{% else %}
+    <section id="uploader">
+                <div id="upload" class="modal" data-state="0" data-ready="false">
+                    <div class="modal__header">
+                        <button class="modal__close-button" type="button">
+                            <svg class="modal__close-icon" viewBox="0 0 16 16" width="16px" height="16px" aria-hidden="true">
+                                <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                                    <polyline points="1,1 15,15" />
+                                    <polyline points="15,1 1,15" />
+                                </g>
+                            </svg>
+                            <span class="modal__sr">Close</span>
+                        </button>
+                    </div>
+     <div class="modal__body">
 
+<div class="modal" id="uploaderModal">
+    <form  enctype="multipart/form-data" class="modal__body" method="post" action="{% url 'imagecnn' %}">
+          {% csrf_token %}
+        <div class="modal__content">
+            <h2 class="modal__title">Upload a File</h2>
+            <p class="modal__message">Select a file to upload from your computer or device.</p>
+            <div class="modal__actions">
+                <input id="fileInput" type="file" name="file" class="modal__file-input" hidden>
+                <label for="fileInput" class="modal__button modal__button--upload">Choose File</label>
+                <button id="uploadButton" type="submit" class="modal__button" >Upload</button>
+            </div>
+        </div>
+    </form>
+    <div id="progressBar" class="modal__progress" style="display: none;">
+        <div class="modal__progress-value" id="progressValue">0%</div>
+        <div class="modal__progress-bar">
+            <div class="modal__progress-fill" id="progressFill"></div>
+        </div>
+    </div>
+    <div id="messages" class="modal__content" style="display: none;">
+        <!-- Error, Success, or Uploading messages will appear here -->
+    </div>
+</div>
+     </div>
+     </div>
+            </section>
+
+
+
+{% endif %}
 <script>
   const messagesList = document.querySelector('.messages-list');
   const messageForm = document.querySelector('.message-form');
@@ -139,5 +165,5 @@
 </script>
 
 
-{% endif %}
+
 {% endblock %}

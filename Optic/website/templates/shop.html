@@ -3,14 +3,26 @@
 {% load static %}
 
 
-        <section id="page-header">
-            
-            <h2>Shopping Page</h2>
-            
-            <p>Explore Our Collection</p>
-            
-        </section>
+            {% if message %}
+        <script>
 
+        function redirectToProduct(s) {
+             window.location.href = 'shop_new/' + s;
+
+        }
+
+        alert("added product to cart")
+        </script>
+
+    {% endif %}
+
+
+             <section id="page-header">
+
+            <h2>Shopping Page</h2>
+
+            <p>Explore Our Collection</p>
+             </section>
         <section id="product1" class="section-p1">
 
           <div class="pro-container">
@@ -18,17 +30,12 @@
 
 {% for data in product_data %}
             <!-- product 1 -->
-            <div class="pro">
-             <img src="/media/{{ data.image }}" height="250" width="100">
-            <form method="post" enctype="application/x-www-form-urlencoded" >
-                  {% csrf_token %}
 
-                <input type="hidden" name="product_id" value={{ data.id }}>
-                <input type="submit">
-            </form>
+            <div class="pro" onclick="redirectToProduct('{{ data.id }}')">
+             <img src="/media/{{ data.image }}"    alt="">
 
-
-              <div class="des">
+                <br>
+              <div class="des" >
                 <span>{{ data.name }}</span>
 {#                <h5>Watch // Variant 1</h5>#}
                 <div class="star">
@@ -40,7 +47,8 @@
                 </div>
                 <h4>${{data.price}}</h4>
               </div>
-              <a href="{% url 'addcart' %}"><ion-icon name="add-outline" class="addtocart"></ion-icon></a>
+              <a href="/shop/{{ data.id }}/"><ion-icon name="add-outline" class="addtocart"></ion-icon></a>
+
             </div>
     {%  endfor %}
 

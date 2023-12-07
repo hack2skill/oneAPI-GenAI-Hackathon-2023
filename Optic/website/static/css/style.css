@@ -74,7 +74,7 @@ body {
 #navbar{
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 #navbar li{
@@ -138,7 +138,8 @@ body {
 /* Home Page */
 
 #hero{
-  background-image: url(/img/hero4.png);
+  background-image: url("/static/img/custom/bg2.jpg");
+  background-attachment: fixed;
   height: 90vh;
   width: 100%;
   background-size: cover;
@@ -151,26 +152,49 @@ body {
 }
 
 #hero h4{
+  color: white;
   padding-bottom: 15px;
 }
 
+#hero h2{
+  color: lavender;
+  text-shadow: 2px 2px #ff0000;
+}
+
 #hero h1{
-  color: purple;
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px #ff0000;
+}
+
+#hero p{
+  color: white;
+  /* font-size: 20px; */
+  font-weight: 600;
 }
 
 #hero button{
-  background-image: url(/img/button.png);
-  background-color: transparent;
-  color: purple;
-  border: none;
+  background-image: url("/static/img/button.png");
+  background-color: rgb(255, 255, 255);
+  box-shadow: 2px 2px black;
+  color: rgb(0, 0, 0);
+  border: 2px solid black;
+  border-top-left-radius: 65px;
+  border-bottom-right-radius: 65px;
   padding: 14px 80px 14px 65px;
   background-repeat: no-repeat;
   cursor: pointer;
   font-weight: 700;
   font-size: 15px;
+  transition: 0.3s ease;
+}
+
+#hero button:hover{
+  transform: scale(1.1);
+  box-shadow: 5px 5px black;
 }
 
 #feature{
+  background: radial-gradient(circle at 10% 20%, rgb(255, 19, 120) 0%, rgb(0, 0, 0) 90.5%);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -232,7 +256,12 @@ body {
 }
 
 #product1{
+  background: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%);
   text-align: center;
+}
+
+#product1 h2,p{
+  color: rgb(160, 160, 160);
 }
 
 #product1 .pro-container{
@@ -246,10 +275,11 @@ body {
   width: 23%;
   min-width: 250px;
   padding: 10px 12px;
-  border: 2px solid purple;
+  background-color: #3c3c3c;
+  border: 1px solid rgb(0, 0, 0);
   border-radius: 10px;
   cursor: pointer;
-  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.3);
   margin: 15px 0;
   transition: 0.2s ease;
   position: relative;
@@ -257,6 +287,7 @@ body {
 
 #product1 .pro:hover{
   box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+  transform: scale(1.05);
 }
 
 #product1 .pro img{
@@ -270,26 +301,26 @@ body {
 }
 
 #product1 .pro .des span{
-  color: grey;
+  color: rgb(214, 214, 214);
   font-size: 15px;
   font-weight: 600;
 }
 
 #product1 .pro .des h5{
   padding-top: 7px;
-  color: black;
+  color: rgb(214, 214, 214);
   font-size: 15px;
 }
 
 .ratingstar{
-  color: rgb(0, 128, 171);
+  color: rgb(214, 214, 214);
   font-size: 12px;
   padding-top: 7px;
 }
 
 #product1 .pro .des h4{
   padding-top: 7px;
-  color: black;
+  color: rgb(255, 255, 255);
   font-size: 20px;
 }
 
@@ -297,28 +328,37 @@ body {
   width: 30px;
   height: 30px;
   line-height: 40px;
-  border: 5px solid lavender;
+  border: 5px solid rgb(255, 255, 255);
   border-radius: 50px;
-  background-color: purple;
+  background-color: rgb(255, 255, 255);
   font-weight: 400;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   position: absolute;
   bottom: 40px;
   right: 20px;
+  transition: 0.3s ease;
+}
+
+#product1 .pro .addtocart:hover{
+  background-color: rgb(92, 92, 92);
+  color: white;
 }
 
 /* Shop Page */
 
 #page-header{
-  background-image: url("/img/banner/b1.jpg");
+  background-image: url("/static/img/banner/b1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-attachment: fixed; */
   width: 100%;
   height: 40vh;
-  background-size: cover;
   display: flex;
   justify-content: center;
   text-align: center;
   flex-direction: column;
   padding: 14px;
+
 }
 
 #page-header h2,
@@ -327,20 +367,31 @@ body {
 }
 
 #pagination{
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  background: radial-gradient(circle at 24.1% 68.8%, rgb(239, 239, 239) 0%, rgb(125, 125, 125) 99.4%);
 }
 
 #pagination a{
-  font-family: 'Poppins';
   text-decoration: none;
-  background: black;
-  width: 30px;
-  height: 30px;
+  background: rgb(49, 49, 49);
+  width: auto;
+  height: auto;
   padding: 15px 25px;
+  border: 1px solid white;
   border-radius: 50px;
+  box-shadow: 2px 2px rgb(0, 0, 0);
   color: white;
   font-size: 20px;
   font-weight: 600;
+  transition: 0.2s ease;
+}
+
+#pagination a:hover{
+  box-shadow: 5px 5px rgb(0, 0, 0);
 }
 
 .arrow{
@@ -352,13 +403,19 @@ body {
 
 #prodetails{
   display: flex;
-  margin-top: 20px;
+  /* margin-top: 20px; */
+  background: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%);
+  color: white;
 }
 
 #prodetails .single-pro-details{
   width: 50%;
   padding-top: 30px;
   text-align: start;
+}
+
+#prodetails .single-pro-details h1,h2,h3,h4,h5,h6{
+  color: white;
 }
 
 #prodetails .single-pro-details h4{
@@ -414,6 +471,152 @@ body {
   flex-basis: 24%;
   cursor: pointer;
 }
+
+/* Shopping Cart Page */
+
+#total-cart{
+  
+  background: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%);
+}
+
+#cart{
+  overflow-x: auto;
+}
+
+#cart table{
+  color: rgb(218, 218, 218);
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  white-space: nowrap;
+}
+
+#cart table img{
+  width: 70px;
+  /* padding: 10px; */
+}
+
+#cart table td:nth-child(1){
+  width: 100px;
+  text-align: center;
+}
+
+#cart table td:nth-child(2){
+  width: 150px;
+  text-align: center;
+}
+
+#cart table td:nth-child(3){
+  width: 250px;
+  text-align: center;
+}
+
+#cart table td:nth-child(4){
+  width: 150px;
+  text-align: center;
+}
+
+#cart table td:nth-child(4) input{
+  width: 70px;
+  padding: 10px 10px 10px 10px;
+}
+
+#cart table td:nth-child(5){
+  width: 150px;
+  text-align: center;
+}
+
+#cart table td:nth-child(6){
+  width: 150px;
+  text-align: center;
+}
+
+#delete{
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+#delete:hover{
+  color: red;
+  transform: scale(1.5);
+}
+
+#cart table thead{
+  border: 3px solid rgb(159, 159, 159);
+  border-left: none;
+  border-right: none;
+}
+
+#cart table thead td{
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 15px;
+  padding: 18px 0;
+}
+
+#cart table thead tr td{
+  padding-top: 15px;
+}
+
+#cart table thead td{
+  font-size: 14px;
+}
+
+#cart-add{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: end;
+}
+
+#subtotal{
+  background-color: beige;
+  /* background-image: linear-gradient(330deg, rgba(2, 2, 2,0.02) 0%, rgba(2, 2, 2,0.02) 81%,transparent 81%, transparent 100%),linear-gradient(104deg, rgba(52, 52, 52,0.01) 0%, rgba(52, 52, 52,0.01) 24%,transparent 24%, transparent 100%),linear-gradient(273deg, rgba(52, 52, 52,0.03) 0%, rgba(52, 52, 52,0.03) 91%,transparent 91%, transparent 100%),linear-gradient(58deg, rgba(212, 212, 212,0.03) 0%, rgba(212, 212, 212,0.03) 51%,transparent 51%, transparent 100%),linear-gradient(297deg, rgba(201, 201, 201,0.01) 0%, rgba(201, 201, 201,0.01) 59%,transparent 59%, transparent 100%),linear-gradient(37deg, rgba(169, 169, 169,0.03) 0%, rgba(169, 169, 169,0.03) 12%,transparent 12%, transparent 100%),linear-gradient(27deg, rgba(144, 144, 144,0.03) 0%, rgba(144, 144, 144,0.03) 76%,transparent 76%, transparent 100%),linear-gradient(168deg, rgba(14, 14, 14,0.03) 0%, rgba(14, 14, 14,0.03) 31%,transparent 31%, transparent 100%),linear-gradient(237deg, rgba(96, 96, 96,0.01) 0%, rgba(96, 96, 96,0.01) 52%,transparent 52%, transparent 100%),linear-gradient(320deg, rgba(30, 30, 30,0.03) 0%, rgba(30, 30, 30,0.03) 52%,transparent 52%, transparent 100%),linear-gradient(271deg, rgba(64, 64, 64,0.03) 0%, rgba(64, 64, 64,0.03) 27%,transparent 27%, transparent 100%),linear-gradient(290deg, rgba(32, 32, 32,0.01) 0%, rgba(32, 32, 32,0.01) 21%,transparent 21%, transparent 100%),linear-gradient(124deg, rgba(231, 231, 231,0.03) 0%, rgba(231, 231, 231,0.03) 1%,transparent 1%, transparent 100%),linear-gradient(298deg, rgba(61, 61, 61,0.03) 0%, rgba(61, 61, 61,0.03) 46%,transparent 46%, transparent 100%),linear-gradient(222deg, rgba(216, 216, 216,0.03) 0%, rgba(216, 216, 216,0.03) 82%,transparent 82%, transparent 100%),linear-gradient(251deg, rgba(211, 211, 211,0.01) 0%, rgba(211, 211, 211,0.01) 57%,transparent 57%, transparent 100%),linear-gradient(200deg, rgba(71, 71, 71,0.03) 0%, rgba(71, 71, 71,0.03) 9%,transparent 9%, transparent 100%),linear-gradient(95deg, rgba(160, 160, 160,0.01) 0%, rgba(160, 160, 160,0.01) 59%,transparent 59%, transparent 100%),linear-gradient(275deg, rgba(160, 160, 160,0.03) 0%, rgba(160, 160, 160,0.03) 3%,transparent 3%, transparent 100%),linear-gradient(351deg, rgba(18, 18, 18,0.02) 0%, rgba(18, 18, 18,0.02) 26%,transparent 26%, transparent 100%),linear-gradient(245deg, rgba(103, 103, 103,0.03) 0%, rgba(103, 103, 103,0.03) 54%,transparent 54%, transparent 100%),linear-gradient(269deg, rgba(145, 145, 145,0.03) 0%, rgba(145, 145, 145,0.03) 76%,transparent 76%, transparent 100%),linear-gradient(150deg, rgba(202, 202, 202,0.03) 0%, rgba(202, 202, 202,0.03) 3%,transparent 3%, transparent 100%),linear-gradient(98deg, rgba(14, 14, 14,0.03) 0%, rgba(14, 14, 14,0.03) 97%,transparent 97%, transparent 100%),linear-gradient(170deg, rgba(142, 142, 142,0.03) 0%, rgba(142, 142, 142,0.03) 13%,transparent 13%, transparent 100%),linear-gradient(347deg, rgba(199, 199, 199,0.01) 0%, rgba(199, 199, 199,0.01) 73%,transparent 73%, transparent 100%),linear-gradient(263deg, rgba(176, 176, 176,0.03) 0%, rgba(176, 176, 176,0.03) 60%,transparent 60%, transparent 100%),linear-gradient(110deg, rgba(191, 191, 191,0.03) 0%, rgba(191, 191, 191,0.03) 83%,transparent 83%, transparent 100%),linear-gradient(198deg, rgba(142, 142, 142,0.01) 0%, rgba(142, 142, 142,0.01) 64%,transparent 64%, transparent 100%),linear-gradient(204deg, rgba(5, 5, 5,0.03) 0%, rgba(5, 5, 5,0.03) 64%,transparent 64%, transparent 100%),linear-gradient(351deg, rgba(83, 83, 83,0.01) 0%, rgba(83, 83, 83,0.01) 84%,transparent 84%, transparent 100%),linear-gradient(12deg, rgba(49, 49, 49,0.01) 0%, rgba(49, 49, 49,0.01) 57%,transparent 57%, transparent 100%),linear-gradient(288deg, rgba(141, 141, 141,0.01) 0%, rgba(141, 141, 141,0.01) 8%,transparent 8%, transparent 100%),linear-gradient(112deg, rgba(191, 191, 191,0.01) 0%, rgba(191, 191, 191,0.01) 8%,transparent 8%, transparent 100%),linear-gradient(230deg, rgba(46, 46, 46,0.03) 0%, rgba(46, 46, 46,0.03) 34%,transparent 34%, transparent 100%),linear-gradient(90deg, rgb(255,255,255),rgb(255,255,255)); */
+  width: 50%;
+  text-align: right;
+  margin-bottom: 30px;
+  border: 3px solid rgb(0, 0, 0);
+  padding: 30px;
+}
+
+#subtotal table{
+  text-align: left;
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+#subtotal table td{
+  width: 50%;
+  border: 1px solid rgb(0, 0, 0);
+  padding: 10px;
+  font-size: 20px; 
+  font-weight: 500;
+}
+
+#subtotal h3{
+  font-size: 25px;
+  color: black;
+  padding: 15px;
+}
+
+#subtotal button{
+  background-color: rgb(0, 0, 0);
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+  border: 1px solid white;
+  border-radius: 25px;
+  padding: 12px 20px ;
+  transition: 0.4s ease;
+}
+
+#subtotal button:hover{
+  background-color: rgb(0, 218, 164);
+  color: rgb(0, 0, 0);
+  transform: scale(1.02);
+  box-shadow: 5px 5px black;
+}
+
 
 /* Footer section */
 
@@ -584,12 +787,20 @@ body {
   border-bottom-right-radius: 10px;
   border-top-right-radius: 10px;
   font-size: 20px;
-  color: #ffffff;
+  color: black;
   text-align: center;
-  line-height: 35px;
-
   margin-right: 3px;
   margin-bottom: 5px;
+  transition: 0.4s ease;
+}
+
+.footer-distributed .footer-icons a:hover{
+  transform: translateY(-10px);
+}
+
+.icon2{
+  margin: 10px;
+  font-size: 30px;
 }
 
 /* If you don't want the footer to be responsive, remove these media queries */
@@ -629,8 +840,7 @@ body {
   width: 10px;
 }
 *::-webkit-scrollbar-track {
-  border-radius: 5px;
-  background-color: #F2FDFF;
+  background-color: black;
 }
 
 *::-webkit-scrollbar-track:hover {
@@ -782,4 +992,13 @@ body {
     width: 100%;
   }  
 
+  /* Cart Page */
+  #cart-add{
+    flex-direction: column;
+  }
+
+  #subtotal{
+    width:100%;
+    padding: 20px;
+  }
 }

@@ -1,0 +1,81 @@
+{% extends 'base.html' %}{% block content %}
+{% load static %}
+{% for information in data %}
+        <section id="prodetails" class="section-p1">
+            <div class="single-pro-image">
+                <img src="/media/{{information.image}}" width="100%" id="MainImg" alt="">
+
+
+            </div>
+
+            <div class="single-pro-details">
+
+    <h1>{{ information.name }}</h1>
+
+                <h4>Optic Ar Watch</h4>
+                <h1>${{ information.price }}</h1>
+    <form method="post">
+     {% csrf_token %}
+    <input type="hidden" name="product_id" value="{{ information.id }}">
+
+                <button class="normal">Add to Cart</button>
+     </form>
+                <h4><span>{{ information.description }}.</span></h4>
+                    <img src="{% static 'img/qr.png' %}"  height="250" alt="">
+
+            {% endfor %}
+            </div>
+        </section>
+
+        <footer class="footer-distributed">
+            <div class="footer-left">
+              <p class="flheader">Optic</p>
+      
+              <p class="footer-links">Prototype Phase - I</p>
+      
+              <p class="footer-company-name">2023</p>
+      
+            </div>
+      
+            <div class="footer-center">
+              <div>
+                <p><span>Developed by :</span><br />Kunal S<br>Sahil Jain<br>Shyam Prasad M</p>
+              </div>
+            </div>
+      
+            <div class="footer-right">
+              <p class="footer-company-about">
+                <span>Our Socials</span>
+                Here are our socials.
+              </p>
+      
+              <div class="footer-icons">
+                <a href="" class="icon1"><ion-icon name="logo-google" class="icon2"></ion-icon></a>
+                &nbsp;&nbsp;&nbsp;
+                <a href="" class="icon1"><ion-icon name="logo-github"class="icon2"></ion-icon></a>
+                &nbsp;&nbsp;&nbsp;
+                <a href="" class="icon1"><ion-icon name="logo-linkedin" class="icon2"></ion-icon></a>
+              </div>
+            </div>
+        </footer>
+
+        <script>
+            var MainImg = document.getElementById("MainImg");
+            var smallimg = document.getElementsByClassName("small-img");
+
+            smallimg[0].onclick = function(){
+                MainImg.src = smallimg[0].src;
+            }
+            smallimg[1].onclick = function(){
+                MainImg.src = smallimg[1].src;
+            }
+            smallimg[2].onclick = function(){
+                MainImg.src = smallimg[2].src;
+            }
+            smallimg[3].onclick = function(){
+                MainImg.src = smallimg[3].src;
+            }
+
+
+
+            {% endblock %}
