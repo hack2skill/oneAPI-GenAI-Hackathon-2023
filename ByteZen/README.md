@@ -83,7 +83,9 @@ pip install --upgrade pip
 pip install scikit-image jupyter matplotlib intel_extension_for_transformers intel-extension-for-tensorflow[cpu]==2.13.0.0 keras_cv keras_core ipykernel prettytable
 jupyter kernelspec uninstall $ENV_NAME -y
 python3 -m ipykernel install --user --name=$ENV_NAME
-conda deactivate
+
+#Clone the repository
+git clone https://github.com/Hemachandirant/Intel_Hackathon_Customer_Support-oneAPI.git
 
 # Install Packages using Requirements.txt
 pip install -r requirements.txt
