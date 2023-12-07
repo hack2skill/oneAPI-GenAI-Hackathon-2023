@@ -61,6 +61,16 @@ python manage.py makemigrations
 python manage.py migrate
 ```
 
+### Add Product Data
+To add data to product table create a superuser using
+ ``` bash python manage.py createsuperuser
+ ```
+ After that start the server 
+ ```` bash
+python manage.py runserver
+````
+and head to the  http://127.0.0.1:8000/admin login with the super user there you will find a option to add data to the product table
+
 ### Start the Django development server:
 
 ```` bash
