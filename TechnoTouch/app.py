@@ -12,9 +12,9 @@ app = Flask(__name__)
 fe = FeatureExtractor()
 features = []
 img_paths = []
-for feature_path in Path("./static/feature").glob("*.npy"):
+for feature_path in Path("./static/flipkart_feature").glob("*.npy"):
     features.append(np.load(feature_path))
-    img_paths.append(Path("./static/dataset") / (feature_path.stem + ".jpg"))
+    img_paths.append(Path("./static/flipkart_dataset") / (feature_path.stem + ".jpg"))
 features = np.array(features)
 
 
