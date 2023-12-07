@@ -1,0 +1,21 @@
+{% extends 'login_base.html' %}{% block content %}
+    {% load static %}
+<section class="auth">
+        <div class="container">
+ <div class="registration form">
+              <header><img src="{% static '/img/optic logo/op3.png' %}" alt="" style="height:30px;">&nbsp;-&nbsp;Signup</header>
+	<form method="POST">
+		{% csrf_token %}
+		{{ register_form }}
+		<button class="btn btn-primary" type="submit">Register</button>
+	</form>
+	<p class="text-center">If you already have an account, <a href="/login">login</a> instead.</p>
+              <div class="signup">
+                <span class="signup">Already have an account?
+                 <label for="check">Login</label>
+                </span>
+              </div>
+ </div>
+        </div>
+</section>
+{% endblock %}

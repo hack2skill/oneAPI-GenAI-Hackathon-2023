@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Optic - Home</title>
+        {% load static %}
+        <link rel="icon" type="image/x-icon" href="{% static '/img/favicon.ico' %}">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+        <link rel="stylesheet" href="{% static '/css/style.css' %}">
+        <link rel="stylesheet" href="{% static '/css/upload.css' %}">
+    </head>
+
+    <body>
+        <section id="header">
+            <a href="#"><img src="{% static '/img/optic logo/op0.png' %}" class="logo" alt="logo"></a>
+
+            <div>
+                <ul id="navbar">
+                    <li><a class="{% if request.path == '/' %}active{% endif %}" href="{% url 'index' %}">Home</a></li>
+                    <li><a class="{% if request.path == '/shop/' %}active{% endif %}" href="{% url 'addcart' %}">Shop</a></li>
+                    <li><a class="{% if request.path == '/chat/' %}active{% endif %}" href="{% url 'chat' %}">Chatbot</a></li>
+                    <!-- <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li> -->
+                {% if  request.user.is_authenticated %}
+                    {<li><a  href="{% url 'logout' %}">Logout</a></li>}
+                {% endif %}
+                    <li><a href="{% url 'cart' %}"><ion-icon name="cart-sharp" size="large" class="icart"></ion-icon></a></li>
+                    <a href="#" id="close"><ion-icon name="close"></ion-icon></a>
+                </ul>
+            </div>
+            <div id="mobile">
+              <ion-icon name="menu" class="menulogo" id="bar"></ion-icon>
+            </div>
+        </section>
+ {% block content %}
+  {% endblock %}
+
+{% if request.path == "/chat/" %}
+
+
+
+ {% else %}
+ <footer class="footer-distributed">
+            <div class="footer-left">
+              <p class="flheader">Optic</p>
+
+              <p class="footer-links">Prototype Phase - I</p>
+
+              <p class="footer-company-name">2023</p>
+
+            </div>
+
+            <div class="footer-center">
+              <div>
+                <p><span>Developed by :</span><br />Kunal S<br>Sahil Jain<br>Shyam Prasad M</p>
+              </div>
+            </div>
+
+            <div class="footer-right">
+              <p class="footer-company-about">
+                <span>Our Socials</span>
+                Here are our socials.
+              </p>
+
+              <div class="footer-icons">
+                <a href="" class="icon1"><ion-icon name="logo-google" class="icon2"></ion-icon></a>
+                &nbsp;&nbsp;&nbsp;
+                <a href="" class="icon1"><ion-icon name="logo-github"class="icon2"></ion-icon></a>
+                &nbsp;&nbsp;&nbsp;
+                <a href="" class="icon1"><ion-icon name="logo-linkedin" class="icon2"></ion-icon></a>
+              </div>
+            </div>
+        </footer>
+   {% endif %}
+        <script src="/js/script.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+         <script src="/js/script.js"></script>
+        <script src="{% static '/js/upload.js' %}"></script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+</body>
+</html>

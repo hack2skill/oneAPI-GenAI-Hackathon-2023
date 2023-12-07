@@ -1,0 +1,31 @@
+{% extends 'login_base.html' %}{% block content %}
+    {% load static %}
+
+    <section class="auth">
+        <div class="container">
+            <input type="checkbox" id="check">
+            <div class="login form">
+              <header><img src="{% static '/img/optic logo/op3.png' %}" alt="" style="height:30px;">&nbsp;-&nbsp;Login</header>
+              {% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li  {% if message.tags %} class=" {{ message.tags }} " {% endif %}> {{ message }} </li>
+    {% endfor %}
+</ul>
+{% endif %}
+                <form method="POST">
+    {% csrf_token %}
+    {{ login_form }}
+    <input type="submit" class="button" value="Login">
+  </form>
+              <div class="signup">
+                <span class="signup">Don't have an account?
+                 <a href="{% url 'register' %}">Signup</a>
+                </span>
+              </div>
+            </div>
+        </div>
+    </section>
+
+
+{% endblock %}

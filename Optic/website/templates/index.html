@@ -1,0 +1,42 @@
+{% extends 'base.html' %}{% block content %}
+
+{% load static %}
+
+
+         <section id="hero">
+            <h4>Presenting,</h4>
+            <h2>OPTIC AR</h2>
+            <h1>Product Showcase</h1>
+            <p>Experience a new way of shopping!</p>
+            <button>Shop Now</button>
+        </section>
+
+
+          <section id="product1" class="section-p1">
+          <h2>Featured Products</h2>
+          <p>Suggested for {{ request.user.username }}</p>
+          <div class="pro-container">
+
+{% for data in product_data %}
+            <!-- product 1 -->
+            <div class="pro">
+              <img src="/media/{{data.image}}" alt=""  style="height: 250px;width: 200px" >
+
+              <div class="des">
+                <span>{{ data.name }}</span>
+                   <div class="variant-dropdown">
+
+    </div>
+{#                <h5>Watch // Variant 1</h5>#}
+
+              </div>
+            </div>
+    {%  endfor %}
+
+
+          </div>
+        </section>
+
+
+
+{% endblock %}

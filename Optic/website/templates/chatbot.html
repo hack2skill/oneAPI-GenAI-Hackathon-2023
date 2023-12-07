@@ -1,0 +1,169 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% if response %}
+    <div class="chat-container">
+  <div class="card flex-grow-1">
+    <div class="card-header bg-primary text-white">Welcome You can ask any question</div>
+    {% if user.is_authenticated %}
+    {% else %}
+    {% endif %}
+    <div class="card-body messages-box">
+
+      <ul class="list-unstyled messages-list">
+ <div class="message-content">
+            The image description {{ response }}
+            </div>
+        {% for chat in chats %}
+          {% if chat.user == request.user %}
+
+            <li class="message sent">
+          <div class="message-text">
+            <div class="message-sender">
+              <b>You</b>
+            </div>
+            <div class="message-content">
+              {{chat.message}}
+            </div>
+          </div>
+        </li>
+
+        <li class="message received">
+          <div class="message-text">
+            <div class="message-sender">
+              <b>AI Chatbot</b>
+            </div>
+
+            <div class="message-content">
+              {{chat.response}}
+            </div>
+          </div>
+        </li>
+
+          {% endif %}
+        {% endfor %}
+
+      </ul>
+
+    </div>
+    <br><br>
+    <br><br>
+    <br><br>
+  </div>
+  <form class="message-form">
+    {%csrf_token%}
+    <div class="input-group">
+      <input type="text" class="form-control message-input" placeholder="Type your message...">
+      <div class="input-group-append">
+        <button type="submit" class="btn btn-primary btn-send">Send</button>
+      </div>
+    </div>
+  </form>
+</div>
+{% else %}
+    <section id="uploader">
+                <div id="upload" class="modal" data-state="0" data-ready="false">
+                    <div class="modal__header">
+                        <button class="modal__close-button" type="button">
+                            <svg class="modal__close-icon" viewBox="0 0 16 16" width="16px" height="16px" aria-hidden="true">
+                                <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                                    <polyline points="1,1 15,15" />
+                                    <polyline points="15,1 1,15" />
+                                </g>
+                            </svg>
+                            <span class="modal__sr">Close</span>
+                        </button>
+                    </div>
+     <div class="modal__body">
+
+<div class="modal" id="uploaderModal">
+    <form  enctype="multipart/form-data" class="modal__body" method="post" action="{% url 'imagecnn' %}">
+          {% csrf_token %}
+        <div class="modal__content">
+            <h2 class="modal__title">Upload a File</h2>
+            <p class="modal__message">Select a file to upload from your computer or device.</p>
+            <div class="modal__actions">
+                <input id="fileInput" type="file" name="file" class="modal__file-input" hidden>
+                <label for="fileInput" class="modal__button modal__button--upload">Choose File</label>
+                <button id="uploadButton" type="submit" class="modal__button" >Upload</button>
+            </div>
+        </div>
+    </form>
+    <div id="progressBar" class="modal__progress" style="display: none;">
+        <div class="modal__progress-value" id="progressValue">0%</div>
+        <div class="modal__progress-bar">
+            <div class="modal__progress-fill" id="progressFill"></div>
+        </div>
+    </div>
+    <div id="messages" class="modal__content" style="display: none;">
+        <!-- Error, Success, or Uploading messages will appear here -->
+    </div>
+</div>
+     </div>
+     </div>
+            </section>
+
+
+
+{% endif %}
+<script>
+  const messagesList = document.querySelector('.messages-list');
+  const messageForm = document.querySelector('.message-form');
+  const messageInput = document.querySelector('.message-input');
+
+  messageForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const message = messageInput.value.trim();
+    if (message.length === 0) {
+      return;
+    }
+
+    const messageItem = document.createElement('li');
+    messageItem.classList.add('message', 'sent');
+    messageItem.innerHTML = `
+        <div class="message-text">
+            <div class="message-sender">
+                <b>You</b>
+            </div>
+            <div class="message-content">
+                ${message}
+            </div>
+        </div>`;
+    messagesList.appendChild(messageItem);
+
+    messageInput.value = '';
+
+    fetch('/chat/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams({
+        'csrfmiddlewaretoken': document.querySelector('[name=csrfmiddlewaretoken]').value,
+        'message': message
+      })
+    })
+      .then(response => response.json())
+      .then(data => {
+        const response = data.response;
+        const messageItem = document.createElement('li');
+        messageItem.classList.add('message', 'received');
+        messageItem.innerHTML = `
+        <div class="message-text">
+            <div class="message-sender">
+              <b>AI Chatbot</b>
+            </div>
+            <div class="message-content">
+                ${response}
+            </div>
+        </div>
+          `;
+        messagesList.appendChild(messageItem);
+      });
+  });
+
+</script>
+
+
+
+{% endblock %}
