@@ -1,32 +1,31 @@
-# oneAPI-GenAI-Hackathon-2023 - Hack2Skill
+#### Team Name - TechnoTouch
+#### Problem Statement - Revolutionary AI-Infused Retail Platform
+#### Team Leader Email - laxmi17sarki@gmail.com
 
-Welcome to the official repository for the oneAPI-GenAI-Hackathon-2023 organized by Hack2Skill!
+### A Brief of the Prototype: Image_Se_Image_Search
+<b> Problem statement:</b> The built models should be able to find database images that correspond to a given query image (i.e., the model should retrieve database images containing the same object as the query).  
 
-## Getting Started
+<b>Example:</b>
+    <ul>
+    <li><b><I>Query:</I></b> Consider you want to search images from your database which contains car .</li>
+    <li><b><i>Solution:</i></b> You provide an image of car then all images from database have car should be return.</li>
+    </ul>
+        
+    
+<b> <u>Screen 1 : Where user Uploads Image as a seach query and hit `Submit`.</u> </b> 
 
-To get started with the oneAPI-GenAI-Hackathon-2023 repository, follow these steps:
+<img src="https://user-images.githubusercontent.com/94001814/190883147-cf7a754f-fbcf-4c6f-96c5-7ebe8b675b4b.png">
+    
+<b> <u>Screen 2 : Where response of similar images are presented.</u> </b> 
 
-### Submission Instruction:
-  1. Fork this repository
-  2. Create a folder with your Team Name
-  3. Upload all the code and necessary files in the created folder
-  4. Upload a **README.md** file in your folder with the below mentioned informations.
-  5. Generate a Pull Request with your Team Name. (Example: submission-XYZ_team)
-
-### README.md must consist of the following information:
-
-#### Team Name -
-#### Problem Statement - 
-#### Team Leader Email -
-
-### A Brief of the Prototype:
-  This section must include UML Diagrams and prototype description
-  
-### Tech Stack: 
-   List Down all technologies used to Build the prototype
-   
-### Step-by-Step Code Execution Instructions:
-  This Section must contain a set of instructions required to clone and run the prototype so that it can be tested and deeply analyzed
-  
-### Future Scope:
-   Write about the scalability and futuristic aspects of the prototype developed
+<img src="https://user-images.githubusercontent.com/94001814/192099400-c69e8562-b5d4-41d6-a047-0e854b761741.png">
+<b>`Note` :</b> <i> images are displayed in their most to less similar images .</i>
+    <br/>
+    <br/>
+<b> <u>Steps to Run the Project :</u> </b>
+    <ul>
+        <li> git clone `https://github.com/codeprofile/MicrosoftHackathon` </li>
+        <li> cd `Image_Se_Image_Search` </li>
+        <li> pip install -r requirements.txt </li>
+        <li>  flask run </li>
+    </ul>
