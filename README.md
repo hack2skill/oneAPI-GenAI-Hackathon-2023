@@ -33,6 +33,14 @@ cd oneAPI-GenAI-Hackathon-2023/optic/webiste/
 pip install -r requirements.txt
 ```
 
+
+### Model Folder
+
+Downalod the Model folder from the Drive link place  it in optic/webiste/
+```` bash
+https://drive.google.com/drive/folders/1UVNSlUs2f0EeA0V6Cee8g_K3872EWlYu?usp=drive_link
+````
+
 ### Configuration
 #### Configure the Django settings, including database setup, API keys, or any other environment-specific configurations.
 
