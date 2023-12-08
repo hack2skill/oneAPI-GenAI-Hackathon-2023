@@ -1,18 +1,7 @@
-import openai
 import json
 import os
 import streamlit as st
-from speech_func import Speech
-from function_definition import functions
 from langchain.llms import CTransformers
-from function_call import Functions_call
-
-
-
-# create an object for the function_call class
-
-function_call = Functions_call()
-
 
 class response_function:
     @staticmethod
