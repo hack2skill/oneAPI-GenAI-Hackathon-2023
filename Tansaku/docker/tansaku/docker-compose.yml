@@ -1,0 +1,16 @@
+version: "3.9"
+
+services:
+  tansaku:
+    build:
+      context: "../../../Tansaku"
+      dockerfile: "docker/tansaku/Dockerfile"
+    volumes:
+      - ../../../Tansaku:/app
+    stdin_open: true
+    tty: true
+    ports:
+      - "5000:5000"
+    container_name: tansaku
+    env_file:
+      - ../../.env
