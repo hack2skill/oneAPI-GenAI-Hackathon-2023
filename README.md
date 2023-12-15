@@ -4,22 +4,28 @@ rr# oneAPI-GenAI-Hackathon-2023 - Hack2Skill
 #### Problem Statement - AI-Enhanced Legal Practice Platform
 #### Team Leader Email - p17rajatp@iima.ac.in
 
-### Overview
-  This project delves into the innovative approach of leveraging government digital land record data to streamline the search for property ownership trails. By harnessing the capabilities of Intel’s OneAPI, coupled with the power of Artificial Intelligence and Asynchronous programming, we have significantly improved the speed, accuracy, and relevance of the data required for tracing property ownership. This professional enhancement of data processing not only simplifies the task at hand but also paves the way for a more efficient and reliable system for property ownership verification.
+### 📜 Overview
+  This project is part of the Intel OneAPI Hackathon 2023, under the Generative AI Large Language Models Fine Tuned For Legal Practice Platform theme by Team BhuMe.
+  We delved into a project to develop a robust LLM finetuned on Indian property registry and documentation data capable of extracting structured information from unstructured and complex property data. We simplify & speed-up the property legal due-diligence, conducted during the short period of deal-making. For the task at hand, we implemented the recent Mistral-7B model, which is an open-source large language model. Data is downloaded during runtime from publicly available government digital land records. Our work focused on creating real estate investor & broker centric product to fetch ownership data automatically for a given Village & Plot number, and produce into a simple to understand UI. Selenium can be used to automate data download from public records, and finetuned Mistral is used to extract structured information which can be neatly shown on a vector map UI. Mistral model is finetuned on downstream tasks (adapter layer) to improve accuracy and make it less verbose. 
   
-  The primary objective of this project is to improve the process of property due-diligence by 100x. We aim to achieve this by downloading year-wise property data, ensuring its relevance and accuracy, and moving away from traditional methods of property verification. By harnessing the untapped potential of Intel's OneAPI and Artificial Intelligence, we can present data in various formats required for property verification. This not only enhances the efficiency of the process but also ensures a higher degree of reliability and accuracy.
+  Further, training was done using Mistral on both Intel's Ipex to perform faster inference & Nvidia T4 GPU for benchmarking purposes. Finally, real time inference will be achieved using Intel_for_pytorch_extension. The inference model is hosted on Intel Developer Cloud using ngrok.
+  
 
-### A Brief of the Prototype:
+### 📜  A Brief of the Prototype:
   App is available on https://app.bhume.in/
   
+  Brokers and real estate investors use our services to automate and simplify property ownership documentation.
+
   Lawyers use this tool to automatically download property registry data from government website, and then filter the property of interest based on property schedule containing khasra no., survey no., plot no. and other fields.
   
   Valuers use this tool to extract sale instances of properties near their area of interest.
 
 
 ### Tech Stack: 
-   List Down all technologies used to Build the prototype
-   We use a mix of react, python, django, postgres and libraries like Selenium, scikit-learn and finetuned LLMs from OpenAI to build and run the app. Data is scrapped and stored for each request during runtime. downloaded data is filtered using document type and then fed into LLMs one by one to extract information which can help us identify the property precisely. For each row in the dataset, we check whether the entry might be relevant to our property of interest. All relevant rows are then shown to the user.
+  
+   Technologies used to Build the prototype Intel® AI Analytics Toolkits, and it's libraries
+   
+   We use a mix of react, python, django, postgres and libraries like Selenium, scikit-learn and finetuned LLMs from OpenAI to build and run the app. Data is scrapped and stored for each request during runtime. downloaded data is filtered using document type and then fed into LLMs one by one to extract information which can help us simplify the UI.
    
 ### Step-by-Step Code Execution Instructions:
   This Section must contain a set of instructions required to clone and run the prototype so that it can be tested and deeply analyzed
