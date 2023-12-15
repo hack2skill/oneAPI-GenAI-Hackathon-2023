@@ -152,7 +152,14 @@ https://github.com/Sriram-code/Intel-Hackathon
 # Application
 Built using streamlit
 
-``` streamlit run demo.py ```
-set the path of demo.py from hackathon folder
+``` streamlit run done.py ```
+set the path of done.py from hackathon folder
+
+IDC remote SSH in VS code
+connecting idc remote server through to vs code using the remote SSH plugin 
+
+Tunneling the instance using ngrok
+
+run the streamlit app to launch the instance
 
 
