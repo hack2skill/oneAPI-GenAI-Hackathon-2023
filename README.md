@@ -66,7 +66,7 @@ rr# oneAPI-GenAI-Hackathon-2023 - Hack2Skill
   ```python falcon-tuned-inference.py --checkpoints <PATH-TO-CHECKPOINT> --max_length 200 --top_k 10```
 
 ### 🚩 Benchmarking Results:
-  ![benchmark](benchmark.png)
+  ![bechmark](bechmark.png)
   *inference time is measured in seconds
   
 ### Future Scope:
