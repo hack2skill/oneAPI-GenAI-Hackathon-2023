@@ -9,18 +9,6 @@ const mapArea = [
 		top: "20%",
 		height: "16%",
 		width: "12%",
-		style: { background: "rgba(255, 0, 0, 0.5)" },
-		render: (area: any, index: number) => (
-			<span
-				style={{
-					display: "flex",
-					alignItems: "center",
-					justifyContent: "center",
-				}}
-			>
-				86
-			</span>
-		),
 		onMouseOver: () => console.log("map onMouseOver"),
 	},
 	{
@@ -28,18 +16,6 @@ const mapArea = [
 		top: "20%",
 		height: "15%",
 		width: "8%",
-		style: { background: "rgba(255, 0, 0, 0.5)" },
-		render: (area: any, index: number) => (
-			<span
-				style={{
-					display: "flex",
-					alignItems: "center",
-					justifyContent: "center",
-				}}
-			>
-				82
-			</span>
-		),
 		onMouseOver: () => console.log("map onMouseOver"),
 	},
 	{
@@ -47,18 +23,6 @@ const mapArea = [
 		top: "20%",
 		height: "15%",
 		width: "7%",
-		style: { background: "rgba(255, 0, 0, 0.5)" },
-		render: (area: any, index: number) => (
-			<span
-				style={{
-					display: "flex",
-					alignItems: "center",
-					justifyContent: "center",
-				}}
-			>
-				83
-			</span>
-		),
 		onMouseOver: () => console.log("map onMouseOver"),
 	},
 	{
@@ -66,18 +30,6 @@ const mapArea = [
 		top: "29%",
 		height: "6%",
 		width: "7%",
-		style: { background: "rgba(255, 0, 0, 0.5)" },
-		render: (area: any, index: number) => (
-			<span
-				style={{
-					display: "flex",
-					alignItems: "center",
-					justifyContent: "center",
-				}}
-			>
-				84
-			</span>
-		),
 		onMouseOver: () => console.log("map onMouseOver"),
 	},
 	{
@@ -85,18 +37,6 @@ const mapArea = [
 		top: "24%",
 		height: "5%",
 		width: "6%",
-		style: { background: "rgba(255, 0, 0, 0.5)" },
-		render: (area: any, index: number) => (
-			<span
-				style={{
-					display: "flex",
-					alignItems: "center",
-					justifyContent: "center",
-				}}
-			>
-				87
-			</span>
-		),
 		onMouseOver: () => console.log("map onMouseOver"),
 	},
 ];

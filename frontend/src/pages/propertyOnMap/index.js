@@ -106,13 +106,13 @@ export const PropertyOnMap = () => {
 							Log Out
 						</div>
 					</div>
-					<div className="flex">
-						<div className="flex justify-center items-center h-[90vh] w-3/5 text-white">
+					<div className="flex flex-col md:flex-row">
+						<div className="flex justify-center items-center h-[50vh] md:h-[90vh] w-full md:w-3/5 text-white">
 							<div className="flex justify-center items-center">
 								<Maps getDetails={getOwenrDetails} />
 							</div>
 						</div>
-						<div className="bg-[#fff] p-5 w-2/5">
+						<div className="bg-[#fff] p-5 w-full md:w-2/5">
 							{selectedDoc && (
 								<div>
 									<div className="flex justify-between">
@@ -128,14 +128,14 @@ export const PropertyOnMap = () => {
 												{selectedDoc?.search_number}
 											</div>
 										</div>
+									</div>
+									<div className="flex justify-between mt-4">
 										<div className="w-1/3">
 											<div>Village Name</div>
 											<div className="text-lg font-bold">
 												{selectedDoc?.village?.village_text_en}
 											</div>
 										</div>
-									</div>
-									<div className="flex justify-between mt-4">
 										<div className="w-1/3">
 											<div>District Name</div>
 											<div className="text-lg font-bold">
@@ -154,8 +154,6 @@ export const PropertyOnMap = () => {
 													<th>Occupier Name</th>
 													<th>Area</th>
 													<th>Land Revenue</th>
-													<th>Barren</th>
-													<th>Number of mutation</th>
 												</tr>
 											</thead>
 											<tbody>
@@ -167,8 +165,6 @@ export const PropertyOnMap = () => {
 															<td>{owner["Occupier Name"]}</td>
 															<td>{owner["Area"]}</td>
 															<td>{owner["Land Revenue"]}</td>
-															<td>{owner["Barren"]}</td>
-															<td>{owner["Number of mutation"]}</td>
 														</tr>
 													))}
 											</tbody>
@@ -176,23 +172,6 @@ export const PropertyOnMap = () => {
 									</div>
 								</div>
 							)}
-						</div>
-					</div>
-					<div className="bg-[#C6C6C63D] w-[10%] p-5">
-						<div className="text-lg font-bold border-b-2 border-blue-300 mb-5">
-							Documents
-						</div>
-						<div className="h-[80vh] overflow-scroll">
-							{docDetails &&
-								docDetails.map((item, index) => (
-									<div
-										key={index}
-										className="text-l font-bold my-2 text-blue-500 cursor-pointer"
-										onClick={() => getDetails(item)}
-									>
-										<SearchCard data={item} />
-									</div>
-								))}
 						</div>
 					</div>
 				</div>
