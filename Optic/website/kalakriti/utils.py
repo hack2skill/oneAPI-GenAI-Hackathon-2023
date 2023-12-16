@@ -1,3 +1,5 @@
+from gtts import gTTS
+from langchain.chat_models import ChatGooglePalm
 from transformers import BlipProcessor, BlipForConditionalGeneration, AutoModelForCausalLM, AutoTokenizer
 from langchain.document_loaders.csv_loader import CSVLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
@@ -9,6 +11,8 @@ from langchain.chains import ConversationalRetrievalChain
 import sys
 import csv
 import os
+# import intel_exstention_pytorch as ipex
+
 
 os.environ['CMAKE_ARGS'] = '-DLLAMA_OPENBLAS=on'
 os.environ['FORCE_CMAKE'] = '1'
@@ -40,7 +44,8 @@ class Intel_Model:
                             model_type="llama",
                             max_new_tokens=512,
                             temperature=0.1, n_gpu_layers=200)
-        self.qa = ConversationalRetrievalChain.from_llm(llm, retriever=docsearch.as_retriever())
+        llm_chat = ChatGooglePalm(google_api_key="AIzaSyDTi3N4HBRfnfbctmWK0czsZmzH0knlkow")
+        self.qa = ConversationalRetrievalChain.from_llm(llm_chat, retriever=docsearch.as_retriever(),max_tokens_limit=512)
 
     def Image_Description_Generation(self, image):
         inputs = self.image_processor(image, return_tensors="pt")
@@ -53,11 +58,20 @@ class Intel_Model:
         return result['answer'].split('\n')[0]
 
     def chat(self, text):
+        chat_history = []
         tokenizer = AutoTokenizer.from_pretrained("microsoft/DialoGPT-medium")
         model = AutoModelForCausalLM.from_pretrained("microsoft/DialoGPT-medium")
 
-        input_ids = tokenizer.encode(text + tokenizer.eos_token, return_tensors='pt')
+        result = self.qa({"question": text, "chat_history": chat_history})
+        language = 'en'
 
-        chat_ids = model.generate(input_ids, max_length=1000, pad_token_id=tokenizer.eos_token_id)
-        res = tokenizer.decode(chat_ids[0], skip_special_tokens=True)
-        return res.replace(text, "")
+        # Passing the text and language to the engine,
+        # here we have marked slow=False. Which tells
+        # the module that the converted audio should
+        # have a high speed
+        myobj = gTTS(text=result['answer'], lang=language, slow=False)
+
+        # Saving the converted audio in a mp3 file named
+        # welcome
+        myobj.save("static/img/file_example_MP3_700KB.mp3")
+        return result['answer']

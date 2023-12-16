@@ -1,20 +1,32 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block content %}
 
 {% if response %}
-    <div class="chat-container">
+
+      <section id="textbot">
+
+
+    <div class="chat-container ">
+
   <div class="card flex-grow-1">
-    <div class="card-header bg-primary text-white">Welcome You can ask any question</div>
-    {% if user.is_authenticated %}
+ <div class="chat-header">
+                        Optic Chatbot
+                    </div>    {% if user.is_authenticated %}
     {% else %}
     {% endif %}
     <div class="card-body messages-box">
 
+<div id="element">
+           The image description {{ response }}
+    </div>
+
       <ul class="list-unstyled messages-list">
- <div class="message-content">
-            The image description {{ response }}
-            </div>
+  <div class="card-body messages-box">
+
+      <ul class="list-unstyled messages-list">
+
+
         {% for chat in chats %}
           {% if chat.user == request.user %}
 
@@ -34,7 +46,6 @@
             <div class="message-sender">
               <b>AI Chatbot</b>
             </div>
-
             <div class="message-content">
               {{chat.response}}
             </div>
@@ -47,10 +58,9 @@
       </ul>
 
     </div>
-    <br><br>
-    <br><br>
-    <br><br>
+
   </div>
+
   <form class="message-form">
     {%csrf_token%}
     <div class="input-group">
@@ -61,20 +71,22 @@
     </div>
   </form>
 </div>
+    </div>
+      </section>
 {% else %}
     <section id="uploader">
-                <div id="upload" class="modal" data-state="0" data-ready="false">
-                    <div class="modal__header">
-                        <button class="modal__close-button" type="button">
-                            <svg class="modal__close-icon" viewBox="0 0 16 16" width="16px" height="16px" aria-hidden="true">
-                                <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-                                    <polyline points="1,1 15,15" />
-                                    <polyline points="15,1 1,15" />
-                                </g>
-                            </svg>
-                            <span class="modal__sr">Close</span>
-                        </button>
-                    </div>
+{#                <div id="upload" class="modal" data-state="0" data-ready="false">#}
+{#                    <div class="modal__header">#}
+{#                        <button class="modal__close-button" type="button">#}
+{#                            <svg class="modal__close-icon" viewBox="0 0 16 16" width="16px" height="16px" aria-hidden="true">#}
+{#                                <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">#}
+{#                                    <polyline points="1,1 15,15" />#}
+{#                                    <polyline points="15,1 1,15" />#}
+{#                                </g>#}
+{#                            </svg>#}
+{#                            <span class="modal__sr">Close</span>#}
+{#                        </button>#}
+{#                    </div>#}
      <div class="modal__body">
 
 <div class="modal" id="uploaderModal">
@@ -103,9 +115,6 @@
      </div>
      </div>
             </section>
-
-
-
 {% endif %}
 <script>
   const messagesList = document.querySelector('.messages-list');
@@ -123,8 +132,8 @@
     const messageItem = document.createElement('li');
     messageItem.classList.add('message', 'sent');
     messageItem.innerHTML = `
-        <div class="message-text">
-            <div class="message-sender">
+        <div class="user-message">
+            <div class="chat-messages">
                 <b>You</b>
             </div>
             <div class="message-content">
@@ -145,16 +154,22 @@
     })
       .then(response => response.json())
       .then(data => {
+          document.getElementById("element").style.display = "none";
         const response = data.response;
         const messageItem = document.createElement('li');
         messageItem.classList.add('message', 'received');
         messageItem.innerHTML = `
-        <div class="message-text">
-            <div class="message-sender">
+        <div class="user-message">
+            <div class="chat-messages">
               <b>AI Chatbot</b>
             </div>
             <div class="message-content">
                 ${response}
+<br>
+<audio controls>
+<source src="/static/img/file_example_MP3_700KB.mp3" type="audio/mpeg">
+</audio>
+
             </div>
         </div>
           `;
@@ -163,6 +178,8 @@
   });
 
 </script>
+
+
 
 
 

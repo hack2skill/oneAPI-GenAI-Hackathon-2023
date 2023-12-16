@@ -1,5 +1,6 @@
 import io
-
+from django.core.mail import EmailMessage, get_connection
+from django.conf import settings
 from PIL import Image
 from django.shortcuts import render, redirect
 from django.http import JsonResponse
@@ -41,7 +42,9 @@ def shopping(request):
 
 def chatbot(request):
     if request.method == 'POST':
+        print("hiiiiii")
         user_query = request.POST.get('message')
+        print(user_query)
 
         chatbot_response = intel_model.chat(user_query)
 
@@ -102,4 +105,13 @@ def cart_delete(request, cart_id):
 
 
 def deliver(request, cart_id):
-    get_cart_details = Cart.objects.filter(id=cart_id).all().values()
+    if request.user.is_authenticated:
+        get_cart_details = Cart.objects.filter(id=cart_id).all().values()
+        with get_connection(
+                host=settings.EMAIL_HOST,
+                port=settings.EMAIL_PORT,
+                username=settings.EMAIL_HOST_USER,
+                password=settings.EMAIL_HOST_PASSWORD,
+                use_tls=settings.EMAIL_USE_TLS
+        ) as connection:
+            EmailMessage("Your order", get_cart_details, settings.EMAIL_HOST_USER  , request.user.email, connection=connection).send()

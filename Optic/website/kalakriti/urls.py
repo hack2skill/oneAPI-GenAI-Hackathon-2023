@@ -26,5 +26,6 @@ urlpatterns = [
     path('imagecnn/', views.image_cnn, name='imagecnn'),
     path('shop/<int:id>/', views.product_info, name='shop_new'),
     path('chart/<int:cart_id>/', views.cart_delete, name="delete_product"),
-    path('order/<int:cart_id>',views.deliver,name="order")
+    path('order/<int:cart_id>',views.deliver,name="order"),
+    path('mail/<int:cart_id>',views.deliver,name = "mail")
 ]
