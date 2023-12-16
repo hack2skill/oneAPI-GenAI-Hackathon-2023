@@ -1,0 +1,22 @@
+const l=[
+    {
+       "Court that issued the decision": "Supreme Court of India",
+       "Report Title": "State of Kerala and Anr. vs. A.C.K. Rajah and Anr.",
+       "Volume No.": "1994 SUPPL. (2) SCR 679",
+       "Page/Section/Paragraph No.": "Page 1 to 4",
+       "Publication Year": "1994",
+       "Summary":"The case involves a dispute between the State of Kerala and the Custodian of vested forests against the members of Nilambur Kovilakam. The respondents in this appeal are the applicants in O.A. 88 of 90 of the Forest Tribunal, Palakkad. The High Court of Kerala reversed the order passed by the Forest Tribunal, ruling in favor of the applicants. The High Court held that the land in dispute formed part of the private forest held by the applicants and under their personal cultivation at the time of the coming into force of the vesting Act. The High Court further held that the Thavazhi represented by the applicants as on 10.5.1971 consisted of at least 10 members and the family at the relevant time could retain a minimum of 75 acres. Since the land in dispute is only about 60 acres, it was held that the applicants are entitled to retain the land in dispute in terms of section 3(2) of the Vesting Act. The Custodian was directed to identify the property in the presence of the representatives of the applicants and hand over the same to the applicants. The State of Kerala and the Custodian have come up in appeal, contending that the High Court was in error in reappreciating the evidence and in holding that the land in dispute formed part of the private forest held by the applicants. They also argued that there is no legal material to hold that the applicant’s family constituted at least 10 members and so could retain the land in dispute under Section 3(2) of the Act. The Supreme Court upheld the Judgment of the High Court, stating that the High Court has wide powers in deciding the appeal under section 8A of the Act and can independently consider the evidence. The Court directed the appropriate authority to pass consequential orders in accordance with the previous Court directions.",
+       "context":"83561-1992___jonew__judis__19509.pdf"
+      },
+      {
+        "Court that issued the decision": "Supreme Court of India",
+        "Report Title": "Commissioner of Central Excise & Service Tax, Bangalore vs. M/S Karnataka Soaps & Detergents Ltd.",
+        "Volume No.": "221",
+        "Page/Section/Paragraph No.": "Page 1 to 8",
+        "Publication Year": "2017",
+        "Summary":"The Supreme Court of India allowed the appeals made by the Commissioner of Central Excise & Service Tax, Bangalore against M/S Karnataka Soaps & Detergents Ltd. The appeals were regarding the levy of excise duty on perfumery compounds manufactured by the respondent and whether actual marketing of the perfumery compound is necessary for the levy of excise duty. The respondent is a manufacturer of agarbathi perfumes and was paying excise duty till March 2001. The Central Board of Excise and Customs issued a circular clarifying that odoriferous substances not capable of being bought and sold in the market are not excisable. The respondent transferred the odoriferous compounds to its Mysore unit on a stock transfer basis and some part of the compounds was sold to another company. The circular clarified that odoriferous compounds not capable of being bought and sold in the market are not excisable and no duty is leviable on such compounds. The circular is issued in the context of dispute with regard to dutiability/excisability of mixture, viz. aromatic chemicals (perfumes) which is also classifiable as an odoriferous compound, under Central Excise Tariff. The clarification is applicable to the product which comes into existence at an intermediate stage in the form of paste/dough in a continuous process of manufacture and not to the manufacture of odoriferous perfume, which is in liquid form and transported/stored in barrels/drums. The Supreme Court allowed the appeals and clarified that odoriferous compounds not capable of being bought and sold in the market are not excisable, and no duty is leviable on such compounds.",
+        "context":"8356-2015___supremecourt__2015__8356__8356_2015_Judgement_12-Oct-2017.pdf"
+      }
+]
+
+export default l;
