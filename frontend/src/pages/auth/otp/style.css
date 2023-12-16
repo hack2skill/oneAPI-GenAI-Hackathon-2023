@@ -1,0 +1,17 @@
+.otp-input{
+  border: 1px-solid black !important;
+}
+
+.primary-button:hover{
+  color: white !important;
+}
+
+.ant-btn-default:not(:disabled):hover{
+  border:none;
+  color: inherit;
+}
+
+
+.kyc-uploader .ant-upload-btn {
+  background-color: white;
+}
