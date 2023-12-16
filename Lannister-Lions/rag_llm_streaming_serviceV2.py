@@ -3,6 +3,7 @@ import sys
 import torch
 ########INTEL########
 import intel_extension_for_pytorch as ipex
+import modin.pandas as pd
 #####################
 from pprint import pprint
 from llama_index import VectorStoreIndex, SimpleDirectoryReader, ServiceContext
