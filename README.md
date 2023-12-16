@@ -30,15 +30,16 @@ rr# oneAPI-GenAI-Hackathon-2023 - Hack2Skill
 ### Step-by-Step Code Execution Instructions:
   This Section must contain a set of instructions required to clone and run the prototype so that it can be tested and deeply analyzed
   
+  
   Run frontend
-  ### `cd frontend`
-  ### `npm install`
-  ### `npm start`
-
-  Inference model 
-  ### `python Mistral_calling.py`
-
+  ```bash
+  cd frontend
+  npm install
+  npm start
+  ```
   Go to http://localhost:3000
+
+  
 
 
 ### Step-by-Step Finetuning 
@@ -48,6 +49,7 @@ rr# oneAPI-GenAI-Hackathon-2023 - Hack2Skill
   conda activate venv
   install pip install -r requirements.txt
   ```
+
   
   set the env variable to select Intel AMX ISA 
   ```bash
@@ -60,10 +62,13 @@ rr# oneAPI-GenAI-Hackathon-2023 - Hack2Skill
   
   Finetuning
   run the command 
-  ```python falcon-tune.py --bf16 True --use_ipex True --max_seq_length 512```
+  ```python esearch/mistral_finetune.py```
   
-  Inference
-  ```python falcon-tuned-inference.py --checkpoints <PATH-TO-CHECKPOINT> --max_length 200 --top_k 10```
+  Inference: Open port for Inference model by running following commands
+  ```bash
+  python gradio_interface_hackathon.py
+  ```
+  
 
 ### 🚩 Benchmarking Results:
   ![bechmark](bechmark.png)
