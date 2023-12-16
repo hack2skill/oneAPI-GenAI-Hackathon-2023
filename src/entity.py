@@ -63,7 +63,69 @@ class QAModel:
         if save_path.exists():
             st.success(f'File {pdf.name} is successfully saved!')
             return save_path
+
     
+    def pdf_highlight1(self, pdf_path, highlight_1):
+        with fitz.open(pdf_path) as doc:
+            text = ''
+            # Iterate through each page
+            for page in doc:
+                # Extract text from each page
+                text += page.get_text()
+            pdf_text = text
+
+        found_text = " "
+        c = 0
+        for high_text in highlight_1:
+
+            c = c + 1
+            start_words = high_text[1:10]
+            end_words = high_text[-10:-1]
+            start_pattern = re.escape(start_words)
+            end_pattern = re.escape(end_words)
+            pattern = rf"{start_pattern}(.*?){end_pattern}"
+
+            # Use re.DOTALL to allow '.' to match newline characters as well
+            match = re.search(pattern, pdf_text, re.DOTALL)
+            if match:
+                f = match.group(0)  # Return the entire matched text
+            else:
+                f = None
+            if f:
+                found_text += f
+                found_text += "\n"
+            # st.write(found_text)
+            list_text = found_text.split("\n")
+            filtered_list = [item.rstrip()
+                             for item in list_text if item.strip()]
+
+        # input text to be highlighted
+        doc = fitz.open(pdf_path)
+        for page in doc:
+            list1 = []
+            for t in filtered_list:
+
+                text_instances = page.search_for(t)
+
+                for text_instance in text_instances:
+
+                    list1.append(text_instance)
+
+            for inst in list1:
+                highlight = page.add_highlight_annot(inst)
+                highlight.update()
+        if list1:
+
+            path = "./saved_contract/" + os.path.basename(pdf_path)
+            doc.save(path)
+            cwd = os.getcwd()
+
+            webbrowser.open_new(f"{cwd}/{path}")
+
+            doc.close()
+
+        return path
+
     def pdf_highlight(self,pdf,text):
         """
         license = asp.License()
