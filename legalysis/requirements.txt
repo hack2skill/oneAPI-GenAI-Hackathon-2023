@@ -1,10 +1,8 @@
 python
-nodejs
 intel_extension_for_pytorch as ipex
 modin
 transformers
 torch
-ngrok
 streamlit
 express
 datasets
