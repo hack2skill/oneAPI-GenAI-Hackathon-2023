@@ -29,7 +29,7 @@ function AnonymousPage({ loggedIn, setLoggedIn, apiUrl, setUserData }) {
 			subtitle: "Tap for details",
 			icon: "📄", // Replace with an SVG or image path if needed
 			siteName: "Bhulekh",
-			documentName: "7/12",
+			documentName: "7/12_new",
 		},
 		{
 			id: 2,
@@ -275,7 +275,7 @@ function MainPage({ loggedIn, setLoggedIn, apiUrl, tokens, userId }) {
 			subtitle: "Tap for details",
 			icon: "📄", // Replace with an SVG or image path if needed
 			siteName: "Bhulekh",
-			documentName: "7/12",
+			documentName: "7/12_new",
 		},
 		{
 			id: 2,

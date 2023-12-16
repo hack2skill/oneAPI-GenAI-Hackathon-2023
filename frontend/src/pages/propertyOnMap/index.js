@@ -2,6 +2,9 @@ import axios from "axios";
 import SearchCard from "./components/searchCard";
 import logo from "src/images/logo.png";
 
+import ReactDOM from "react-dom";
+import QRCode from "react-qr-code";
+
 import React, { useEffect, useState } from "react";
 import Maps from "./components/map";
 import { useNavigate } from "react-router-dom";
@@ -169,6 +172,40 @@ export const PropertyOnMap = () => {
 													))}
 											</tbody>
 										</table>
+									</div>
+									<div className="flex flex-col items-center">
+										<div
+											style={{
+												height: "auto",
+												margin: "0 auto",
+												maxWidth: 120,
+												width: "100%",
+											}}
+										>
+											<QRCode
+												size={120}
+												style={{
+													height: "auto",
+													maxWidth: "100%",
+													width: "100%",
+												}}
+												value={
+													selectedDoc.service_requests_history[0].delivery_url
+												}
+												viewBox={`0 0 256 256`}
+											/>
+										</div>
+										<a
+											className="text-blue-700 mt-5"
+											target="_blank"
+											href={
+												selectedDoc.service_requests_history[0].delivery_url
+											}
+											download
+											rel="noreferrer"
+										>
+											Download
+										</a>
 									</div>
 								</div>
 							)}

@@ -23,6 +23,7 @@
     "react-avatar": "^5.0.3",
     "react-dom": "^18.2.0",
     "react-dropdown-select": "^4.10.0",
+    "react-qr-code": "^2.0.12",
     "react-query": "^3.39.3",
     "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.8.2",
